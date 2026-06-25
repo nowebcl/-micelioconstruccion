@@ -7,11 +7,11 @@
 
 :root {
   /* Indobi Exact Theme Colors */
-  --color-navy: #00173c;         /* Deep Navy Blue */
+  --color-navy: #1b1e22;         /* Deep Navy Blue */
   --color-accent: #ffbc13;       /* Industrial Gold/Amber Accent */
   --color-accent-rgb: 255, 188, 19;
   --color-text: #777777;         /* Indobi Standard Body Text */
-  --color-heading: #00173c;      /* Heading Color */
+  --color-heading: #1b1e22;      /* Heading Color */
   --color-white: #ffffff;
   --color-bg-light: #f9f9f9;     /* Light Gray Section Background */
   
@@ -205,7 +205,7 @@ header {
 }
 
 .header-top {
-  background: #00173c;
+  background: #1b1e22;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 12px 0;
 }
@@ -327,7 +327,7 @@ header.scrolled .menu-area {
 /* Hamburger toggle button */
 .nav-toggle {
   display: none;
-  background: rgba(0, 23, 60, 0.05);
+  background: rgba(27, 30, 34, 0.05);
   border: none;
   cursor: pointer;
   width: 45px;
@@ -404,7 +404,7 @@ header.scrolled .menu-area {
   width: 100%;
   max-width: 400px;
   height: 100vh;
-  background: rgba(0, 23, 60, 0.96);
+  background: rgba(27, 30, 34, 0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -619,7 +619,7 @@ header.scrolled .menu-area {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 23, 60, 0.75);
+  background: rgba(27, 30, 34, 0.75);
   z-index: 2;
 }
 
@@ -1838,9 +1838,9 @@ header.scrolled .menu-area {
   width: 42px;
   height: 42px;
   color: var(--color-navy);
-  border: 1px solid rgba(0, 23, 60, 0.1);
+  border: 1px solid rgba(27, 30, 34, 0.1);
   border-radius: 50%;
-  background: rgba(0, 23, 60, 0.02);
+  background: rgba(27, 30, 34, 0.02);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1855,7 +1855,7 @@ header.scrolled .menu-area {
   border-color: var(--color-navy);
   color: var(--color-white);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 23, 60, 0.2);
+  box-shadow: 0 5px 15px rgba(27, 30, 34, 0.2);
 }
 
 .team-social ul li.social-email a:hover {
@@ -1983,7 +1983,7 @@ header.scrolled .menu-area {
   position: relative;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  box-shadow: 0 -15px 40px rgba(0, 23, 60, 0.05);
+  box-shadow: 0 -15px 40px rgba(27, 30, 34, 0.05);
   overflow: hidden;
 }
 
@@ -2187,7 +2187,7 @@ header.scrolled .menu-area {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 25px rgba(0, 23, 60, 0.3);
+  box-shadow: 0 8px 25px rgba(27, 30, 34, 0.3);
   z-index: 9999;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: waPulse 2s infinite;
@@ -2256,7 +2256,7 @@ header.scrolled .menu-area {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 23, 60, 0.9);
+  background: rgba(27, 30, 34, 0.9);
   backdrop-filter: blur(8px);
 }
 
@@ -2361,7 +2361,7 @@ header.scrolled .menu-area {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 23, 60, 0.85);
+  background: rgba(27, 30, 34, 0.85);
   backdrop-filter: blur(5px);
 }
 
@@ -2445,7 +2445,7 @@ header.scrolled .menu-area {
   border-radius: 12px;
   margin-top: 30px;
   border-left: 4px solid var(--color-accent);
-  box-shadow: 0 10px 30px rgba(0, 23, 60, 0.15);
+  box-shadow: 0 10px 30px rgba(27, 30, 34, 0.15);
 }
 
 .office-manager {
@@ -2514,7 +2514,7 @@ header.scrolled .menu-area {
   background: var(--color-white);
   border-radius: 16px;
   padding: 40px;
-  box-shadow: 0 20px 50px rgba(0, 23, 60, 0.08);
+  box-shadow: 0 20px 50px rgba(27, 30, 34, 0.08);
   border-top: 5px solid var(--color-accent);
   position: relative;
 }
@@ -2669,18 +2669,18 @@ header.scrolled .menu-area {
 .complexity-btn.active {
   background: var(--color-white);
   color: var(--color-navy);
-  box-shadow: 0 3px 10px rgba(0, 23, 60, 0.08);
+  box-shadow: 0 3px 10px rgba(27, 30, 34, 0.08);
 }
 
 /* Output Price Box */
 .price-display-box {
-  background: linear-gradient(135deg, #00173c 0%, #00225c 100%);
+  background: linear-gradient(135deg, #1b1e22 0%, #2e333a 100%);
   border-radius: 12px;
   padding: 25px;
   color: var(--color-white);
   text-align: center;
   margin-bottom: 35px;
-  box-shadow: 0 10px 30px rgba(0, 23, 60, 0.15);
+  box-shadow: 0 10px 30px rgba(27, 30, 34, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
