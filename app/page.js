@@ -1262,6 +1262,7 @@ export default function Home() {
                       </a>
                     </li>
                   </ul>
+                  <span className="team-soon">(pronto)</span>
                 </div>
               </div>
             </div>
@@ -1295,6 +1296,7 @@ export default function Home() {
                       </a>
                     </li>
                   </ul>
+                  <span className="team-soon">(pronto)</span>
                 </div>
               </div>
             </div>
@@ -1328,6 +1330,7 @@ export default function Home() {
                       </a>
                     </li>
                   </ul>
+                  <span className="team-soon">(pronto)</span>
                 </div>
               </div>
             </div>
