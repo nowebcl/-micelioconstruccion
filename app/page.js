@@ -7,16 +7,6 @@ import Image from "next/image";
 const primaryProjects = [
   {
     id: 1,
-    title: "Levantamiento Topográfico 3D",
-    category: "Topografía",
-    img: "/assets/levantamiento_3d.png",
-    loc: "Chamiza, Carretera Austral, Puerto Montt",
-    coords: "41°28'44\"S, 72°51'32\"W",
-    elevation: "115m",
-    desc: "Modelamiento tridimensional y ortofotocarta digital de alta precisión para subdivisión de loteos, delimitación de cercos y curvas de nivel centimétricas mediante teledetección aérea."
-  },
-  {
-    id: 2,
     title: "Montaje Estructural Galpón Industrial R5",
     category: "Construcción",
     img: "/assets/WhatsApp Image 2026-06-10 at 21.15.58.jpeg",
@@ -26,7 +16,7 @@ const primaryProjects = [
     desc: "Izado, nivelación y fijación de columnas de acero estructural con recubrimiento de protección anticorrosiva pesada adaptada a la pluviosidad austral."
   },
   {
-    id: 3,
+    id: 2,
     title: "Excavación de Fundaciones Especiales",
     category: "Movimiento Tierras",
     img: "/assets/WhatsApp Image 2026-06-10 at 21.15.58 (1).jpeg",
@@ -36,7 +26,7 @@ const primaryProjects = [
     desc: "Preparación de sellos de fundación, compactaciones controladas y excavación masiva mediante maquinaria pesada guiada digitalmente en cota."
   },
   {
-    id: 4,
+    id: 3,
     title: "Inspección Técnica de Obra Aeródromo",
     category: "Inspección ITO",
     img: "/assets/WhatsApp Image 2026-06-10 at 21.15.58 (2).jpeg",
@@ -44,6 +34,83 @@ const primaryProjects = [
     coords: "41°52'12\"S, 73°49'33\"W",
     elevation: "65m",
     desc: "Monitoreo fotogramétrico regular, control geométrico 3D de volúmenes de tierra y fiscalización técnica del trazado de pistas auxiliares."
+  }
+];
+
+// The 6 high-fidelity B2B services requested by the client
+const servicesList = [
+  {
+    id: 1,
+    title: "Construcción de estructuras metálicas",
+    hoverTitle: "Estructuras Metálicas",
+    desc: "Fabricación y montaje de galpones industriales, plataformas, pasarelas, bodegas, estructuras de apoyo, ampliaciones y obras metálicas para instalaciones productivas.",
+    img: "/assets/WhatsApp Image 2026-06-10 at 21.15.58.jpeg",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    )
+  },
+  {
+    id: 2,
+    title: "Movimiento de tierras y enrocados",
+    hoverTitle: "Movimiento de Tierras",
+    desc: "Excavaciones, rellenos estructurales, estabilización de terrenos, conformación de plataformas y protección mediante enrocados para infraestructura industrial y costera.",
+    img: "/assets/earthmoving.png",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 009 11V5a2 2 0 00-2-2H4a2 2 0 00-2 2v6a13 13 0 002.28 7.68M12 11c0-3.517 1.009-6.799 2.753-9.571m3.44 2.04l-.054.09A13.916 13.916 0 0015 11v6a2 2 0 002 2h3a2 2 0 002-2v-6a13.012 13.012 0 00-2.28-7.68" />
+      </svg>
+    )
+  },
+  {
+    id: 3,
+    title: "Obras civiles y minería",
+    hoverTitle: "Obras Civiles y Minería",
+    desc: "Ejecución de obras civiles para proyectos industriales, faenas mineras e infraestructura productiva, considerando movimiento de tierras, hormigones, fundaciones y montajes.",
+    img: "/assets/WhatsApp Image 2026-06-10 at 21.15.58 (1).jpeg",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+      </svg>
+    )
+  },
+  {
+    id: 4,
+    title: "Agua potable y alcantarillado",
+    hoverTitle: "Obras Sanitarias",
+    desc: "Construcción, reparación y ampliación de redes de agua potable, alcantarillado y sistemas sanitarios para instalaciones industriales y proyectos públicos.",
+    img: "/assets/WhatsApp Image 2026-06-10 at 21.16.00 (1).jpeg",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+      </svg>
+    )
+  },
+  {
+    id: 5,
+    title: "Mantención industrial",
+    hoverTitle: "Mantención Industrial",
+    desc: "Servicios de mantención preventiva y correctiva de infraestructura, reparación de instalaciones, mejoramientos y apoyo permanente a operaciones industriales.",
+    img: "/assets/WhatsApp Image 2026-06-10 at 21.16.14.jpeg",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+        <circle cx="12" cy="12" r="3" />
+      </svg>
+    )
+  },
+  {
+    id: 6,
+    title: "Topografía",
+    hoverTitle: "Topografía y Drones RTK",
+    desc: "Levantamientos topográficos mediante estación total, GPS y drones RTK para proyectos de ingeniería, construcción, control de obras y cubicaciones.",
+    img: "/assets/drone_topography.png",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+      </svg>
+    )
   }
 ];
 
@@ -838,95 +905,33 @@ export default function Home() {
           </div>
 
           <div className="services-grid-3">
-            
-            {/* Service 1 */}
-            <div className="s-single-services">
-              <div className="services-img-wrap">
-                <Image 
-                  src="/assets/levantamiento_3d.png" 
-                  alt="Topografía de Precisión" 
-                  fill 
-                  sizes="(max-width: 992px) 100vw, 33vw"
-                />
-              </div>
-              <div className="h-service">
-                <h5>Topografía de Precisión</h5>
-              </div>
-              <div className="services-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                </svg>
-              </div>
-              
-              {/* Overlay on Hover */}
-              <div className="services-hover">
-                <div className="second-services-content">
-                  <h5>Topografía Aérea</h5>
-                  <p>Levantamientos multiespectrales, control volumétrico de acopios y modelamiento digital de terrenos con drones DJI RTK.</p>
-                  <a href="#contacto" onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}>Cotizar Ahora</a>
+            {servicesList.map((service) => (
+              <div key={service.id} className="s-single-services">
+                <div className="services-img-wrap">
+                  <Image 
+                    src={service.img} 
+                    alt={service.title} 
+                    fill 
+                    sizes="(max-width: 992px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="h-service">
+                  <h5>{service.title}</h5>
+                </div>
+                <div className="services-icon">
+                  {service.icon}
+                </div>
+                
+                {/* Overlay on Hover */}
+                <div className="services-hover">
+                  <div className="second-services-content">
+                    <h5>{service.hoverTitle}</h5>
+                    <p>{service.desc}</p>
+                    <a href="#contacto" onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}>Cotizar Ahora</a>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Service 2 */}
-            <div className="s-single-services">
-              <div className="services-img-wrap">
-                <Image 
-                  src="/assets/industrial_design.png" 
-                  alt="Cálculo Estructural" 
-                  fill 
-                  sizes="(max-width: 992px) 100vw, 33vw"
-                />
-              </div>
-              <div className="h-service">
-                <h5>Cálculo Estructural</h5>
-              </div>
-              <div className="services-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              
-              {/* Overlay on Hover */}
-              <div className="services-hover">
-                <div className="second-services-content">
-                  <h5>Ingeniería de Detalle</h5>
-                  <p>Cálculo y estructuración de losas, naves metálicas de gran luz y cimientos de hormigón armado para tránsito pesado.</p>
-                  <a href="#contacto" onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}>Cotizar Ahora</a>
-                </div>
-              </div>
-            </div>
-
-            {/* Service 3 */}
-            <div className="s-single-services">
-              <div className="services-img-wrap">
-                <Image 
-                  src="/assets/earthmoving.png" 
-                  alt="Movimiento de Tierras" 
-                  fill 
-                  sizes="(max-width: 992px) 100vw, 33vw"
-                />
-              </div>
-              <div className="h-service">
-                <h5>Movimiento de Tierras</h5>
-              </div>
-              <div className="services-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                  <circle cx="12" cy="12" r="3" />
-                </svg>
-              </div>
-              
-              {/* Overlay on Hover */}
-              <div className="services-hover">
-                <div className="second-services-content">
-                  <h5>Maquinaria y Cota</h5>
-                  <p>Excavaciones controladas geométricamente, estabilización de taludes, escolleras de ribera y trazados viales certificados.</p>
-                  <a href="#contacto" onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}>Cotizar Ahora</a>
-                </div>
-              </div>
-            </div>
-
+            ))}
           </div>
         </div>
       </section>
@@ -982,6 +987,195 @@ export default function Home() {
               />
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================
+         SECTION 5B: SECTORES QUE ATENDEMOS
+         ========================================== */}
+      <section className="sectors-section section-padding" id="sectores">
+        <div className="container">
+          <div className="section-title center-align text-center">
+            <h5>MERCADOS CLAVE</h5>
+            <h2>Sectores que Atendemos</h2>
+            <div className="section-title-bar"></div>
+            <p className="section-intro-text">
+              Garantizamos soluciones técnicas y seriedad operativa para los sectores más exigentes del sur de Chile.
+            </p>
+          </div>
+
+          <div className="sectors-grid">
+            
+            {/* Sector 1 */}
+            <div className="sector-card">
+              <div className="sector-icon-box">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h4>Industria Salmonera</h4>
+              <p>Construcción y mantención de infraestructura productiva. Soluciones adaptadas a exigencias sanitarias, pluviales y costeras.</p>
+            </div>
+
+            {/* Sector 2 */}
+            <div className="sector-card">
+              <div className="sector-icon-box">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h4>Sector Público</h4>
+              <p>Ejecución de proyectos para municipios, ministerios y organismos del Estado. Rigurosidad en normativas y plazos públicos.</p>
+            </div>
+
+            {/* Sector 3 */}
+            <div className="sector-card">
+              <div className="sector-icon-box">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h4>Empresas Privadas</h4>
+              <p>Obras industriales, infraestructura y proyectos especiales llave en mano. Flexibilidad y soporte técnico de alto nivel.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================
+         SECTION 5C: ¿POR QUÉ MICELIO?
+         ========================================== */}
+      <section className="why-micelio-section section-padding">
+        <div className="container">
+          <div className="why-micelio-grid">
+            
+            {/* Left Column: Image/Visual details */}
+            <div className="why-visual-panel">
+              <div className="why-visual-frame">
+                <Image 
+                  src="/assets/WhatsApp Image 2026-06-10 at 21.15.58 (2).jpeg" 
+                  alt="Control de Calidad Micelio" 
+                  fill 
+                  sizes="(max-width: 992px) 100vw, 40vw"
+                />
+                <div className="why-badge">B2B FOCUS</div>
+              </div>
+            </div>
+
+            {/* Right Column: Key advantages */}
+            <div className="why-content-panel">
+              <h5>NUESTRO COMPROMISO</h5>
+              <h2>¿Por qué Micelio?</h2>
+              <div className="section-title-bar" style={{ margin: "15px 0 25px 0" }}></div>
+              <p className="why-intro">
+                Nos diferenciamos por integrar la ingeniería de detalle y la precisión geométrica digital en cada etapa de la construcción física.
+              </p>
+              
+              <div className="why-advantages-list">
+                <div className="adv-item">
+                  <span className="adv-check">✓</span>
+                  <div className="adv-text-wrap">
+                    <h4>Profesionales con experiencia en terreno</h4>
+                    <p>Dirección técnica de obras liderada por ingenieros civiles con amplia trayectoria en faenas australes.</p>
+                  </div>
+                </div>
+                <div className="adv-item">
+                  <span className="adv-check">✓</span>
+                  <div className="adv-text-wrap">
+                    <h4>Planificación y cumplimiento de plazos</h4>
+                    <p>Gestión rigurosa de cronogramas para evitar desviaciones y asegurar la entrega oportuna del proyecto.</p>
+                  </div>
+                </div>
+                <div className="adv-item">
+                  <span className="adv-check">✓</span>
+                  <div className="adv-text-wrap">
+                    <h4>Equipos propios y asociados</h4>
+                    <p>Disponibilidad inmediata de maquinaria pesada y equipamiento de precisión para asegurar la autonomía de la obra.</p>
+                  </div>
+                </div>
+                <div className="adv-item">
+                  <span className="adv-check">✓</span>
+                  <div className="adv-text-wrap">
+                    <h4>Soluciones llave en mano</h4>
+                    <p>Desde el levantamiento inicial y el cálculo de fundaciones hasta el montaje final y la entrega en cota.</p>
+                  </div>
+                </div>
+                <div className="adv-item">
+                  <span className="adv-check">✓</span>
+                  <div className="adv-text-wrap">
+                    <h4>Cobertura en la Patagonia y sur de Chile</h4>
+                    <p>Capacidad logística para movilizar recursos e infraestructura a zonas extremas y de difícil acceso.</p>
+                  </div>
+                </div>
+                <div className="adv-item">
+                  <span className="adv-check">✓</span>
+                  <div className="adv-text-wrap">
+                    <h4>Seguridad como prioridad operacional</h4>
+                    <p>Rigurosos protocolos de prevención de riesgos para proteger el capital humano y asegurar faenas con cero incidentes.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================
+         SECTION 5D: CAPACIDADES TÉCNICAS
+         ========================================== */}
+      <section className="capabilities-section section-padding">
+        <div className="container">
+          <div className="section-title center-align text-center">
+            <h5>SOLIDEZ E INGENIERÍA</h5>
+            <h2>Capacidades</h2>
+            <div className="section-title-bar"></div>
+            <p className="section-intro-text">
+              Detalle de nuestras especialidades operativas y alcance de ejecución técnica para contratos industriales.
+            </p>
+          </div>
+
+          <div className="capabilities-table-wrapper">
+            <table className="capabilities-table">
+              <thead>
+                <tr>
+                  <th>Especialidad</th>
+                  <th>Capacidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="cap-spec">Estructuras metálicas</td>
+                  <td className="cap-val">Fabricación y montaje</td>
+                </tr>
+                <tr>
+                  <td className="cap-spec">Movimiento de tierras</td>
+                  <td className="cap-val">Excavaciones y rellenos</td>
+                </tr>
+                <tr>
+                  <td className="cap-spec">Enrocados</td>
+                  <td className="cap-val">Protección de riberas y taludes</td>
+                </tr>
+                <tr>
+                  <td className="cap-spec">Obras civiles</td>
+                  <td className="cap-val">Hormigón y fundaciones</td>
+                </tr>
+                <tr>
+                  <td className="cap-spec">Obras sanitarias</td>
+                  <td className="cap-val">Agua potable y alcantarillado</td>
+                </tr>
+                <tr>
+                  <td className="cap-spec">Mantención</td>
+                  <td className="cap-val">Infraestructura industrial</td>
+                </tr>
+                <tr>
+                  <td className="cap-spec">Topografía</td>
+                  <td className="cap-val">GPS, drones RTK y estación total</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -1273,6 +1467,55 @@ export default function Home() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================
+         SECTION 9B: EXPERIENCIA EN PROYECTOS PARA...
+         ========================================== */}
+      <section className="client-experience-section section-padding">
+        <div className="container">
+          <div className="section-title center-align text-center">
+            <h5>NUESTRA TRAYECTORIA</h5>
+            <h2>Experiencia en proyectos para</h2>
+            <div className="section-title-bar"></div>
+            <p className="section-intro-text">
+              Respaldamos a diversos actores clave del desarrollo industrial y público en el sur de Chile.
+            </p>
+          </div>
+
+          <div className="client-experience-grid">
+            <div className="exp-client-card">
+              <div className="exp-client-icon">🐟</div>
+              <h4>Industria salmonera</h4>
+              <p>Infraestructura terrestre y costera</p>
+            </div>
+            <div className="exp-client-card">
+              <div className="exp-client-icon">🏗️</div>
+              <h4>Constructoras</h4>
+              <p>Montaje estructural y fundaciones</p>
+            </div>
+            <div className="exp-client-card">
+              <div className="exp-client-icon">📐</div>
+              <h4>Empresas de ingeniería</h4>
+              <p>Soporte técnico y topografía RTK</p>
+            </div>
+            <div className="exp-client-card">
+              <div className="exp-client-icon">🏢</div>
+              <h4>Municipalidades</h4>
+              <p>Obras civiles e infraestructura local</p>
+            </div>
+            <div className="exp-client-card">
+              <div className="exp-client-icon">🏛️</div>
+              <h4>Servicios Públicos</h4>
+              <p>Proyectos sectoriales y viales</p>
+            </div>
+            <div className="exp-client-card">
+              <div className="exp-client-icon">🏬</div>
+              <h4>Empresas privadas</h4>
+              <p>Galpones, tierras y obras especiales</p>
+            </div>
           </div>
         </div>
       </section>
@@ -1642,11 +1885,16 @@ export default function Home() {
               {/* Col 1: About Us info */}
               <div className="footer-widget">
                 <div className="f-widget-title">
-                  <h2>Sobre Nosotros</h2>
+                  <h2>Micelio Construcción</h2>
                 </div>
                 <div className="footer-link">
-                  <p>Soluciones conceptuales, de detalle y ejecución de obras civiles, topografía con drones y cubicación de tierras de alta precisión en la región de Los Lagos.</p>
-                  <div className="f-contact">
+                  <p style={{ fontWeight: "700", color: "var(--color-accent)", textTransform: "uppercase", letterSpacing: "1px", fontSize: "11px", marginBottom: "8px" }}>
+                    Ingeniería • Construcción • Infraestructura Industrial • Topografía
+                  </p>
+                  <p style={{ fontSize: "14px", lineHeight: "24px" }}>
+                    Construimos soluciones para la industria del sur de Chile.
+                  </p>
+                  <div className="f-contact" style={{ marginTop: "15px" }}>
                     <ul>
                       <li>
                         <span className="icon">📞</span>
@@ -1684,11 +1932,12 @@ export default function Home() {
                 </div>
                 <div className="footer-link">
                   <ul>
-                    <li><a href="#servicios" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Topografía Aérea</a></li>
-                    <li><a href="#servicios" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Cálculo Estructural</a></li>
-                    <li><a href="#servicios" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Movimiento Tierras</a></li>
-                    <li><a href="#servicios" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Montaje de Galpones</a></li>
-                    <li><a href="#servicios" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Inspección ITO</a></li>
+                    <li><a href="#servicios" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Construcción Estructuras Metálicas</a></li>
+                    <li><a href="#servicios" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Movimiento de Tierras y Enrocados</a></li>
+                    <li><a href="#servicios" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Obras Civiles y Minería</a></li>
+                    <li><a href="#servicios" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Agua Potable y Alcantarillado</a></li>
+                    <li><a href="#servicios" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Mantención Industrial</a></li>
+                    <li><a href="#servicios" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Topografía y Drones RTK</a></li>
                   </ul>
                 </div>
               </div>
@@ -1707,7 +1956,7 @@ export default function Home() {
                         width={110} 
                         height={80} 
                         style={{ cursor: "pointer" }}
-                        onClick={() => setActiveLightbox(primaryProjects[3])}
+                        onClick={() => setActiveLightbox(primaryProjects[2])}
                       />
                     </li>
                     <li>
@@ -1717,17 +1966,15 @@ export default function Home() {
                         width={110} 
                         height={80} 
                         style={{ cursor: "pointer" }}
-                        onClick={() => setActiveLightbox(primaryProjects[1])}
+                        onClick={() => setActiveLightbox(primaryProjects[0])}
                       />
                     </li>
                     <li>
                       <Image 
-                        src="/assets/levantamiento_3d.png" 
+                        src="/assets/WhatsApp Image 2026-06-10 at 21.16.17.jpeg" 
                         alt="Galería 3" 
                         width={110} 
                         height={80} 
-                        style={{ cursor: "pointer" }}
-                        onClick={() => setActiveLightbox(primaryProjects[0])}
                       />
                     </li>
                     <li>
@@ -1737,7 +1984,7 @@ export default function Home() {
                         width={110} 
                         height={80} 
                         style={{ cursor: "pointer" }}
-                        onClick={() => setActiveLightbox(primaryProjects[2])}
+                        onClick={() => setActiveLightbox(primaryProjects[1])}
                       />
                     </li>
                     <li>
