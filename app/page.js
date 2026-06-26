@@ -7,13 +7,13 @@ import Image from "next/image";
 const primaryProjects = [
   {
     id: 1,
-    title: "Levantamiento Aerofotogramétrico Chamiza",
+    title: "Levantamiento Topográfico 3D",
     category: "Topografía",
-    img: "/assets/WhatsApp Image 2026-06-10 at 21.15.57.jpeg",
+    img: "/assets/levantamiento_3d.png",
     loc: "Chamiza, Carretera Austral, Puerto Montt",
     coords: "41°28'44\"S, 72°51'32\"W",
     elevation: "115m",
-    desc: "Mapeo centimétrico multiespectral de terrenos mediante drones DJI RTK para delimitación de curvas de nivel, cuencas viales y análisis hidrológico integral."
+    desc: "Modelamiento tridimensional y ortofotocarta digital de alta precisión para subdivisión de loteos, delimitación de cercos y curvas de nivel centimétricas mediante teledetección aérea."
   },
   {
     id: 2,
@@ -1726,7 +1726,7 @@ export default function Home() {
                     </li>
                     <li>
                       <Image 
-                        src="/assets/WhatsApp Image 2026-06-10 at 21.15.57.jpeg" 
+                        src="/assets/levantamiento_3d.png" 
                         alt="Galería 3" 
                         width={110} 
                         height={80} 
