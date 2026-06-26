@@ -2180,14 +2180,14 @@ header.scrolled .menu-area {
   left: 30px;
   width: 60px;
   height: 60px;
-  background: #25d366;
-  color: #ffffff;
-  border: none;
+  background: var(--color-navy);
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 8px 25px rgba(27, 30, 34, 0.3);
   z-index: 9999;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: waPulse 2s infinite;
@@ -2195,15 +2195,16 @@ header.scrolled .menu-area {
 }
 
 .floating-whatsapp-btn:hover {
-  background: #20ba5a;
-  color: #ffffff;
+  background: var(--color-accent);
+  color: var(--color-navy);
   transform: scale(1.08) translateY(-3px);
-  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+  box-shadow: 0 12px 30px rgba(255, 188, 19, 0.4);
 }
 
 .floating-wa-icon {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
 }
 
 /* Premium Tooltip Label */
@@ -2224,18 +2225,18 @@ header.scrolled .menu-area {
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
-/* Green online status indicator dot */
+/* Gold online status indicator dot */
 .floating-whatsapp-btn .wa-tooltip::before {
   content: '';
   display: inline-block;
   width: 8px;
   height: 8px;
-  background-color: #25d366;
+  background-color: var(--color-accent);
   border-radius: 50%;
-  box-shadow: 0 0 8px #25d366;
+  box-shadow: 0 0 8px var(--color-accent);
 }
 
 .floating-whatsapp-btn:hover .wa-tooltip {
@@ -2245,13 +2246,13 @@ header.scrolled .menu-area {
 
 @keyframes waPulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    box-shadow: 0 0 0 0 rgba(255, 188, 19, 0.5);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    box-shadow: 0 0 0 15px rgba(255, 188, 19, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    box-shadow: 0 0 0 0 rgba(255, 188, 19, 0);
   }
 }
 
