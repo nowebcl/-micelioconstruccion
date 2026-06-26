@@ -546,7 +546,17 @@ export default function Home() {
         </div>
 
         {/* Mobile Navigation Overlay Menu */}
+        {mobileMenuOpen && (
+          <div className="mobile-menu-overlay" onClick={() => setMobileMenuOpen(false)}></div>
+        )}
         <div className={`mobile-menu ${mobileMenuOpen ? "active" : ""}`}>
+          <button 
+            className="mobile-menu-close-btn" 
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Cerrar menú"
+          >
+            ✕
+          </button>
           <div className="mobile-menu-links">
             {[
               { 
