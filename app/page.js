@@ -1708,40 +1708,38 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bottom copyright bar - Blends seamlessly with footer above */}
-        <div className="copyright-wrap">
-          <div className="container">
-            <div className="copyright-row">
-              {/* Silver blended logo - Larger & Prominent */}
-              <Image 
-                src="/assets/logo_corporativo.png" 
-                alt="Micelio Logo" 
-                width={180} 
-                height={55} 
-                priority
-              />
-              <div className="copy-text">
-                Copyright &copy; 2026 MICELIO INGENIERÍA Y CONSTRUCCIÓN. Todos los derechos reservados.
-              </div>
-              
-              {/* High-Fidelity Professional SVG Social Icons */}
-              <div className="footer-social">
-                <a href="#inicio" title="LinkedIn" aria-label="LinkedIn">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-                  </svg>
-                </a>
-                <a href="#inicio" title="Instagram" aria-label="Instagram">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
-                  </svg>
-                </a>
-                <a href="#inicio" title="Facebook" aria-label="Facebook">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z" />
-                  </svg>
-                </a>
-              </div>
+        {/* Bottom copyright row - Seamlessly integrated into the footer's main flow */}
+        <div className="container">
+          <div className="copyright-row">
+            {/* Silver blended logo - Scaled up & Prominent */}
+            <Image 
+              src="/assets/logo_corporativo.png" 
+              alt="Micelio Logo" 
+              width={240} 
+              height={75} 
+              priority
+            />
+            <div className="copy-text">
+              Copyright &copy; 2026 MICELIO INGENIERÍA Y CONSTRUCCIÓN. Todos los derechos reservados.
+            </div>
+            
+            {/* High-Fidelity Minimalist SVG Social Icons */}
+            <div className="footer-social">
+              <a href="#inicio" title="LinkedIn" aria-label="LinkedIn">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
+                </svg>
+              </a>
+              <a href="#inicio" title="Instagram" aria-label="Instagram">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17 2H7C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5zm3 15c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10c1.65 0 3 1.35 3 3v10z M12 7.5c-2.48 0-4.5 2.02-4.5 4.5s2.02 4.5 4.5 4.5 4.5-2.02 4.5-4.5-2.02-4.5-4.5-4.5zm0 7c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z M17.25 5.5c-.41 0-.75.34-.75.75s.34.75.75.75.75-.34.75-.75-.34-.75-.75-.75z" />
+                </svg>
+              </a>
+              <a href="#inicio" title="Facebook" aria-label="Facebook">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14 13.5h2.5l1-3.5H14V7.8c0-.9.7-.9 1.5-.9H18V3.5c-.8-.1-2.2-.2-3.6-.2C11.5 3.3 9.5 5 9.5 8.5v1.5H7v3.5h2.5V22h5v-8.5z" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>

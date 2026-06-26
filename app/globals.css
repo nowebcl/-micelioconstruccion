@@ -2130,40 +2130,43 @@ header.scrolled .menu-area {
   filter: brightness(0.9) contrast(1.1);
 }
 
-/* Copyright Row */
-.copyright-wrap {
-  background: var(--color-navy);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 35px 0;
-}
-
+/* Copyright Row - Integrated within footer container */
 .copyright-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .copyright-row img {
-  height: 60px;
+  height: 75px;
   width: auto;
   object-fit: contain;
   filter: invert(1) brightness(1.25) contrast(1.15);
   mix-blend-mode: screen;
+  transition: transform 0.3s ease;
+}
+
+.copyright-row img:hover {
+  transform: scale(1.03);
 }
 
 .copy-text {
   font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .copyright-row .footer-social a {
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.05);
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
   margin-left: 10px;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -2171,7 +2174,9 @@ header.scrolled .menu-area {
 .copyright-row .footer-social a:hover {
   background: var(--color-accent);
   color: var(--color-navy);
-  transform: scale(1.15) rotate(360deg);
+  border-color: var(--color-accent);
+  transform: scale(1.12) rotate(360deg);
+  box-shadow: 0 0 15px rgba(255, 188, 19, 0.35);
 }
 
 /* Floating WhatsApp Button in bottom-left with company colors */
