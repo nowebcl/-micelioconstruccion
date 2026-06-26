@@ -16,7 +16,7 @@ export const metadata = {
   openGraph: {
     title: "Micelio | Ingeniería y Construcción de Vanguardia",
     description: "Soluciones integrales de ingeniería con tecnología avanzada en el sur de Chile.",
-    images: ["/assets/drone_topography.png"],
+    images: ["/assets/levantamiento_3d.png"],
     type: "website",
     locale: "es_CL",
   },

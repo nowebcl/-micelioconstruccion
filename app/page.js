@@ -719,7 +719,7 @@ export default function Home() {
           
           {/* Slide 1: Drone topograhy video */}
           <div className={`single-slide ${activeSlide === 0 ? "active" : ""}`}>
-            <video className="slide-bg-video" autoPlay loop muted playsInline poster="/assets/drone_topography.png">
+            <video className="slide-bg-video" autoPlay loop muted playsInline poster="/assets/levantamiento_3d.png">
               <source src="/assets/fondo.mp4" type="video/mp4" />
             </video>
             <div className="slide-overlay"></div>
@@ -885,7 +885,7 @@ export default function Home() {
             <div className="s-single-services">
               <div className="services-img-wrap">
                 <Image 
-                  src="/assets/drone_topography.png" 
+                  src="/assets/levantamiento_3d.png" 
                   alt="Topografía de Precisión" 
                   fill 
                   sizes="(max-width: 992px) 100vw, 33vw"
