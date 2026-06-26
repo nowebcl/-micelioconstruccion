@@ -1768,7 +1768,7 @@ export default function Home() {
               priority
             />
             <div className="copy-text">
-              Copyright &copy; 2026 MICELIO INGENIERÍA Y CONSTRUCCIÓN. Todos los derechos reservados.
+              Copyright &copy; 2026 MICELIO INGENIERÍA Y CONSTRUCCIÓN. Todos los derechos reservados. | Desarrollado por <a href="https://www.noweb.cl" target="_blank" rel="noopener noreferrer">noweb.dev</a>
             </div>
             
             {/* High-Fidelity Minimalist SVG Social Icons */}
