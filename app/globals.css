@@ -2132,8 +2132,9 @@ header.scrolled .menu-area {
 
 /* Copyright Row */
 .copyright-wrap {
-  background: #00122e;
-  padding: 30px 0;
+  background: var(--color-navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 35px 0;
 }
 
 .copyright-row {
@@ -2143,10 +2144,10 @@ header.scrolled .menu-area {
 }
 
 .copyright-row img {
-  height: 40px;
+  height: 60px;
   width: auto;
   object-fit: contain;
-  filter: invert(1) brightness(1.2) contrast(1.1);
+  filter: invert(1) brightness(1.25) contrast(1.15);
   mix-blend-mode: screen;
 }
 
