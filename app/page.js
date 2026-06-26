@@ -1233,19 +1233,9 @@ export default function Home() {
       </section>
 
       {/* ==========================================
-         SECTION 9: PROVEEDORES Y ALIANZAS (ANTIGRAVITY FLOATING LOOP)
+         SECTION 9: PROVEEDORES Y ALIANZAS (3D MAP BACKGROUND FLOATING LOOP)
          ========================================== */}
       <section className="supplier-area section-padding">
-        
-        {/* Antigravity Floating Background Particles */}
-        <div className="antigravity-container">
-          <div className="floating-orb floating-orb-1"></div>
-          <div className="floating-orb floating-orb-2"></div>
-          <div className="floating-orb floating-orb-3"></div>
-          <div className="floating-orb floating-orb-4"></div>
-          <div className="floating-orb floating-orb-5"></div>
-          <div className="floating-orb floating-orb-6"></div>
-        </div>
 
         <div className="container">
           <div className="section-title center-align text-center">
