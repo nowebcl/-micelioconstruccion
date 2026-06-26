@@ -1630,9 +1630,9 @@ header.scrolled .menu-area {
 }
 
 /* ==========================================================================
-   11. TESTIMONIAL AREA (ANTIGRAVITY FLOATING REDESIGN)
+   11. SUPPLIERS & ALLIANCES AREA (ANTIGRAVITY FLOATING LOOP)
    ========================================================================== */
-.testimonial-area {
+.supplier-area {
   position: relative;
   background: linear-gradient(180deg, #ffffff 0%, #f7f9fb 100%);
   overflow: hidden;
@@ -1651,32 +1651,99 @@ header.scrolled .menu-area {
   }
 }
 
-.testimonial-active2 {
-  max-width: 900px;
+.suppliers-marquee-panel {
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
   z-index: 2;
   animation: floatCard 6s ease-in-out infinite;
-}
-
-.single-testimonial {
-  text-align: center;
-  padding: 50px 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 24px;
   box-shadow: 0 15px 35px rgba(27, 30, 34, 0.03);
+  padding: 45px 0;
+  overflow: hidden;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.single-testimonial:hover {
+.suppliers-marquee-panel:hover {
   background: rgba(255, 255, 255, 0.85);
-  transform: translateY(-2px);
   box-shadow: 0 25px 50px rgba(27, 30, 34, 0.06);
+}
+
+.suppliers-marquee-active {
+  overflow: hidden;
+  width: 100%;
+}
+
+.suppliers-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 40px;
+  animation: scrollSuppliers 28s linear infinite;
+}
+
+.suppliers-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.supplier-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(27, 30, 34, 0.06);
+  border-radius: 16px;
+  padding: 18px 35px;
+  box-shadow: 0 4px 15px rgba(27, 30, 34, 0.015);
+  filter: grayscale(1) opacity(0.55);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.supplier-card:hover {
+  filter: grayscale(0) opacity(1);
+  background: #ffffff;
+  border-color: rgba(255, 188, 19, 0.25);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(255, 188, 19, 0.1);
+}
+
+.supplier-logo-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-navy);
+}
+
+.s-logo-icon {
+  flex-shrink: 0;
+  color: var(--color-navy);
+  transition: all 0.35s ease;
+}
+
+.supplier-card:hover .s-logo-icon {
+  color: var(--supplier-color, var(--color-accent));
+  transform: scale(1.15) rotate(6deg);
+  filter: drop-shadow(0 0 5px rgba(255, 188, 19, 0.2));
+}
+
+.s-logo-text {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--color-navy);
+  transition: color 0.3s ease;
+}
+
+@keyframes scrollSuppliers {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Antigravity Floating Background Elements */
@@ -1776,72 +1843,6 @@ header.scrolled .menu-area {
   100% {
     transform: translateY(0px) rotate(360deg);
   }
-}
-
-.testi-author-avatar {
-  width: 95px;
-  height: 95px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 20px;
-  box-shadow: 0 8px 25px rgba(27, 30, 34, 0.08);
-  border: 3px solid var(--color-accent);
-  transition: transform 0.3s ease;
-}
-
-.testi-author-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.ta-info {
-  margin-bottom: 25px;
-}
-
-.ta-info h6 {
-  font-size: 18px;
-  color: var(--color-navy);
-  font-weight: 700;
-  margin-bottom: 2px;
-}
-
-.ta-info span {
-  font-size: 12px;
-  color: var(--color-accent);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.single-testimonial p {
-  font-size: 16px;
-  line-height: 30px;
-  color: var(--color-text);
-  font-style: italic;
-  max-width: 780px;
-}
-
-.test-dots-testimonials {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 30px;
-}
-
-.test-dots-testimonials button {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ddd;
-  border: none;
-  cursor: pointer;
-  transition: var(--transition-smooth);
-}
-
-.test-dots-testimonials button.active {
-  background-color: var(--color-accent);
-  transform: scale(1.2);
 }
 
 /* ==========================================================================

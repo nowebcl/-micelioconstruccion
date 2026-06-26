@@ -47,6 +47,58 @@ const primaryProjects = [
   }
 ];
 
+// Supplier list for Section 9 (Infinite Marquee Loop)
+const suppliers = [
+  {
+    id: 1,
+    name: "DJI Enterprise",
+    color: "#00ebff",
+    svgPath: "M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-3-9h6v2H9v-2zm-2 4h10v2H7v-2zm4-8h2v2h-2V7z"
+  },
+  {
+    id: 2,
+    name: "Trimble",
+    color: "#ffbc13",
+    svgPath: "M12 2L2 22h20L12 2zm0 4l6.5 13H5.5L12 6z"
+  },
+  {
+    id: 3,
+    name: "Caterpillar",
+    color: "#ffcd00",
+    svgPath: "M12 2L2 17h6v5h8v-5h6L12 2zm-1 9h2v2h-2v-2z"
+  },
+  {
+    id: 4,
+    name: "Leica Geosystems",
+    color: "#dc2626",
+    svgPath: "M12 2l10 5.8v11.5L12 22 2 16.2V7.8L12 2z"
+  },
+  {
+    id: 5,
+    name: "Topcon",
+    color: "#16a34a",
+    svgPath: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
+  },
+  {
+    id: 6,
+    name: "Komatsu",
+    color: "#2563eb",
+    svgPath: "M4 4h16v4H4V4zm4 8h8v8H8v-8z"
+  },
+  {
+    id: 7,
+    name: "Melón Hormigones",
+    color: "#ea580c",
+    svgPath: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14H11v-4h2v4zm0-6H11V8h2v2z"
+  },
+  {
+    id: 8,
+    name: "Sodimac",
+    color: "#dc2626",
+    svgPath: "M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"
+  }
+];
+
 // Testimonial list for Section 11
 const testimonials = [
   {
@@ -157,8 +209,7 @@ export default function Home() {
   // Interactive Lightbox states
   const [activeLightbox, setActiveLightbox] = useState(null);
 
-  // Testimonials active index
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
 
   // Newsletter & Form submission
   const [newsletterEmail, setNewsletterEmail] = useState("");
@@ -1182,9 +1233,9 @@ export default function Home() {
       </section>
 
       {/* ==========================================
-         SECTION 9: TESTIMONIALS (ANTIGRAVITY FLOATING REDESIGN)
+         SECTION 9: PROVEEDORES Y ALIANZAS (ANTIGRAVITY FLOATING LOOP)
          ========================================== */}
-      <section className="testimonial-area section-padding">
+      <section className="supplier-area section-padding">
         
         {/* Antigravity Floating Background Particles */}
         <div className="antigravity-container">
@@ -1198,36 +1249,33 @@ export default function Home() {
 
         <div className="container">
           <div className="section-title center-align text-center">
-            <h2>Qué Dicen Nuestros Clientes</h2>
+            <h2>Nuestros Proveedores y Alianzas</h2>
+            <div className="section-title-bar"></div>
           </div>
 
-          <div className="testimonial-active2">
-            <div className="single-testimonial">
-              <div className="testi-author-avatar">
-                <Image 
-                  src={testimonials[activeTestimonial].avatar} 
-                  alt={testimonials[activeTestimonial].author} 
-                  width={85} 
-                  height={85} 
-                />
+          <div className="suppliers-marquee-panel">
+            <div className="suppliers-marquee-active">
+              <div className="suppliers-marquee-track">
+                {/* Render the suppliers list twice to create a seamless infinite loop */}
+                {[...suppliers, ...suppliers].map((supplier, idx) => (
+                  <div key={`${supplier.id}-${idx}`} className="supplier-card">
+                    <div className="supplier-logo-inner">
+                      <svg 
+                        viewBox="0 0 24 24" 
+                        className="s-logo-icon" 
+                        fill="currentColor" 
+                        width="28" 
+                        height="28" 
+                        style={{ '--supplier-color': supplier.color }}
+                        aria-hidden="true"
+                      >
+                        <path d={supplier.svgPath} />
+                      </svg>
+                      <span className="s-logo-text">{supplier.name}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="ta-info">
-                <h6>{testimonials[activeTestimonial].author}</h6>
-                <span>{testimonials[activeTestimonial].role} // {testimonials[activeTestimonial].company}</span>
-              </div>
-              <p>“{testimonials[activeTestimonial].quote}”</p>
-            </div>
-
-            {/* Dot Selectors */}
-            <div className="test-dots-testimonials">
-              {testimonials.map((_, idx) => (
-                <button 
-                  key={idx} 
-                  className={activeTestimonial === idx ? "active" : ""}
-                  onClick={() => setActiveTestimonial(idx)}
-                  aria-label={`View testimonial ${idx + 1}`}
-                />
-              ))}
             </div>
           </div>
         </div>
