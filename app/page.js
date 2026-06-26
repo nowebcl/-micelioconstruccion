@@ -47,58 +47,6 @@ const primaryProjects = [
   }
 ];
 
-// Supplier list for Section 9 (Infinite Marquee Loop)
-const suppliers = [
-  {
-    id: 1,
-    name: "DJI Enterprise",
-    color: "#00ebff",
-    svgPath: "M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-3-9h6v2H9v-2zm-2 4h10v2H7v-2zm4-8h2v2h-2V7z"
-  },
-  {
-    id: 2,
-    name: "Trimble",
-    color: "#ffbc13",
-    svgPath: "M12 2L2 22h20L12 2zm0 4l6.5 13H5.5L12 6z"
-  },
-  {
-    id: 3,
-    name: "Caterpillar",
-    color: "#ffcd00",
-    svgPath: "M12 2L2 17h6v5h8v-5h6L12 2zm-1 9h2v2h-2v-2z"
-  },
-  {
-    id: 4,
-    name: "Leica Geosystems",
-    color: "#dc2626",
-    svgPath: "M12 2l10 5.8v11.5L12 22 2 16.2V7.8L12 2z"
-  },
-  {
-    id: 5,
-    name: "Topcon",
-    color: "#16a34a",
-    svgPath: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
-  },
-  {
-    id: 6,
-    name: "Komatsu",
-    color: "#2563eb",
-    svgPath: "M4 4h16v4H4V4zm4 8h8v8H8v-8z"
-  },
-  {
-    id: 7,
-    name: "Melón Hormigones",
-    color: "#ea580c",
-    svgPath: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14H11v-4h2v4zm0-6H11V8h2v2z"
-  },
-  {
-    id: 8,
-    name: "Sodimac",
-    color: "#dc2626",
-    svgPath: "M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"
-  }
-];
-
 // Testimonial list for Section 11
 const testimonials = [
   {
@@ -1233,40 +1181,88 @@ export default function Home() {
       </section>
 
       {/* ==========================================
-         SECTION 9: PROVEEDORES Y ALIANZAS (3D MAP BACKGROUND FLOATING LOOP)
+         SECTION 9: TECNOLOGÍA TOPOGRÁFICA 3D (ANTIGRAVITY SHOWCASE)
          ========================================== */}
-      <section className="supplier-area section-padding">
+      <section className="topography-3d-area section-padding">
+        
+        {/* Antigravity Floating Background Particles */}
+        <div className="antigravity-container">
+          <div className="floating-orb floating-orb-1"></div>
+          <div className="floating-orb floating-orb-2"></div>
+          <div className="floating-orb floating-orb-3"></div>
+          <div className="floating-orb floating-orb-4"></div>
+        </div>
 
         <div className="container">
           <div className="section-title center-align text-center">
-            <h2>Nuestros Proveedores y Alianzas</h2>
+            <h2>Tecnología de Levantamiento Topográfico 3D</h2>
             <div className="section-title-bar"></div>
           </div>
 
-          <div className="suppliers-marquee-panel">
-            <div className="suppliers-marquee-active">
-              <div className="suppliers-marquee-track">
-                {/* Render the suppliers list twice to create a seamless infinite loop */}
-                {[...suppliers, ...suppliers].map((supplier, idx) => (
-                  <div key={`${supplier.id}-${idx}`} className="supplier-card">
-                    <div className="supplier-logo-inner">
-                      <svg 
-                        viewBox="0 0 24 24" 
-                        className="s-logo-icon" 
-                        fill="currentColor" 
-                        width="28" 
-                        height="28" 
-                        style={{ '--supplier-color': supplier.color }}
-                        aria-hidden="true"
-                      >
-                        <path d={supplier.svgPath} />
-                      </svg>
-                      <span className="s-logo-text">{supplier.name}</span>
-                    </div>
-                  </div>
-                ))}
+          <div className="topo-3d-grid">
+            
+            {/* Left Column: Technical telemetry */}
+            <div className="topo-3d-specs-card">
+              <div className="specs-header">
+                <span className="specs-badge">RTK PRECISION</span>
+                <h3>Especificaciones Técnicas del Levantamiento</h3>
+              </div>
+              <p className="specs-intro">
+                Procesamiento fotogramétrico centimétrico real mediante teledetección aérea y puntos de control terrestre (GCP) para el modelamiento digital de superficies.
+              </p>
+              <div className="specs-list">
+                <div className="spec-item">
+                  <div className="spec-label">Tecnología Sensor</div>
+                  <div className="spec-value">Cámara RTK de Obturador Global (DJI Matrice)</div>
+                </div>
+                <div className="spec-item">
+                  <div className="spec-label">Área del Proyecto</div>
+                  <div className="spec-value">106.7 Hectáreas (59 Lotes delimitados)</div>
+                </div>
+                <div className="spec-item">
+                  <div className="spec-label">Precisión Centimétrica</div>
+                  <div className="spec-value">Horizontal: &lt; 1.5 cm / Vertical: &lt; 2.5 cm</div>
+                </div>
+                <div className="spec-item">
+                  <div className="spec-label">Nube de Puntos 3D</div>
+                  <div className="spec-value">450 Millones de puntos georreferenciados</div>
+                </div>
+                <div className="spec-item">
+                  <div className="spec-label">Entregables Clave</div>
+                  <div className="spec-value">Modelo Digital de Terreno, Curvas de Nivel, Ortofotocarta 3D</div>
+                </div>
+              </div>
+              <div className="specs-footer-btn">
+                <a href="#contacto" className="btn ss-btn" onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}>
+                  Cotizar Levantamiento 3D
+                </a>
               </div>
             </div>
+
+            {/* Right Column: 3D Image Showcase with Scanner Laser & HUD */}
+            <div className="topo-3d-visual-container">
+              <div className="topo-3d-card-floating">
+                {/* HUD Overlay details */}
+                <div className="hud-overlay-top-left">SCANNING: ACTIVE</div>
+                <div className="hud-overlay-top-right">GPS: RTK FIXED</div>
+                <div className="hud-overlay-bottom-left">ALT: 115m // SCALE 1:1000</div>
+                <div className="hud-overlay-bottom-right">SYS: conform</div>
+                
+                {/* Gold Scanning Laser Line */}
+                <div className="scanning-laser-line"></div>
+                
+                <div className="topo-3d-image-wrapper">
+                  <Image 
+                    src="/assets/levantamiento_3d.png" 
+                    alt="Levantamiento Topográfico 3D Micelio" 
+                    fill
+                    sizes="(max-width: 992px) 100vw, 50vw"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

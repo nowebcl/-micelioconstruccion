@@ -1630,12 +1630,112 @@ header.scrolled .menu-area {
 }
 
 /* ==========================================================================
-   11. SUPPLIERS & ALLIANCES AREA (ANTIGRAVITY FLOATING LOOP)
+   11. TOPOGRAPHY 3D AREA (ANTIGRAVITY SHOWCASE)
    ========================================================================== */
-.supplier-area {
+.topography-3d-area {
   position: relative;
-  background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('/assets/levantamiento_3d.png') center center / cover no-repeat;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fb 100%);
   overflow: hidden;
+}
+
+.topo-3d-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Specs card styling */
+.topo-3d-specs-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(27, 30, 34, 0.03);
+}
+
+.specs-badge {
+  display: inline-block;
+  background: rgba(255, 188, 19, 0.1);
+  color: var(--color-accent);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 188, 19, 0.2);
+}
+
+.topo-3d-specs-card h3 {
+  font-size: 26px;
+  color: var(--color-navy);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.specs-intro {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--color-text);
+  margin-bottom: 25px;
+}
+
+.specs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(27, 30, 34, 0.06);
+  padding-bottom: 12px;
+  align-items: center;
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.spec-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(27, 30, 34, 0.7);
+}
+
+.spec-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-navy);
+  text-align: right;
+}
+
+/* Floating Image card with laser scanner & HUD */
+.topo-3d-visual-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topo-3d-card-floating {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.4 / 1;
+  border-radius: 20px;
+  background: rgba(27, 30, 34, 0.95);
+  border: 2px solid rgba(255, 188, 19, 0.25);
+  box-shadow: 0 25px 55px rgba(27, 30, 34, 0.15);
+  padding: 24px;
+  overflow: hidden;
+  animation: floatCard 6s ease-in-out infinite;
 }
 
 /* Antigravity floating card animation */
@@ -1651,98 +1751,175 @@ header.scrolled .menu-area {
   }
 }
 
-.suppliers-marquee-panel {
-  max-width: 100%;
-  margin: 0 auto;
+.topo-3d-image-wrapper {
   position: relative;
-  z-index: 2;
-  animation: floatCard 6s ease-in-out infinite;
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 24px;
-  box-shadow: 0 15px 35px rgba(27, 30, 34, 0.03);
-  padding: 45px 0;
-  overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.suppliers-marquee-panel:hover {
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 25px 50px rgba(27, 30, 34, 0.06);
-}
-
-.suppliers-marquee-active {
-  overflow: hidden;
   width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.suppliers-marquee-track {
-  display: flex;
-  width: max-content;
-  gap: 40px;
-  animation: scrollSuppliers 28s linear infinite;
+.topo-3d-image-wrapper img {
+  object-fit: cover;
 }
 
-.suppliers-marquee-track:hover {
-  animation-play-state: paused;
-}
-
-.supplier-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(27, 30, 34, 0.06);
-  border-radius: 16px;
-  padding: 18px 35px;
-  box-shadow: 0 4px 15px rgba(27, 30, 34, 0.015);
-  filter: grayscale(1) opacity(0.55);
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.supplier-card:hover {
-  filter: grayscale(0) opacity(1);
-  background: #ffffff;
-  border-color: rgba(255, 188, 19, 0.25);
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 12px 28px rgba(255, 188, 19, 0.1);
-}
-
-.supplier-logo-inner {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--color-navy);
-}
-
-.s-logo-icon {
-  flex-shrink: 0;
-  color: var(--color-navy);
-  transition: all 0.35s ease;
-}
-
-.supplier-card:hover .s-logo-icon {
-  color: var(--supplier-color, var(--color-accent));
-  transform: scale(1.15) rotate(6deg);
-  filter: drop-shadow(0 0 5px rgba(255, 188, 19, 0.2));
-}
-
-.s-logo-text {
-  font-family: var(--font-heading);
-  font-size: 15px;
-  font-weight: 700;
+/* Technical HUD overlays */
+.hud-overlay-top-left,
+.hud-overlay-top-right,
+.hud-overlay-bottom-left,
+.hud-overlay-bottom-right {
+  position: absolute;
+  font-family: monospace;
+  font-size: 10px;
+  color: rgba(255, 188, 19, 0.85);
   letter-spacing: 0.5px;
-  color: var(--color-navy);
-  transition: color 0.3s ease;
+  z-index: 4;
 }
 
-@keyframes scrollSuppliers {
+.hud-overlay-top-left {
+  top: 10px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hud-overlay-top-left::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  animation: pulseGreen 1s infinite alternate;
+}
+
+.hud-overlay-top-right {
+  top: 10px;
+  right: 15px;
+}
+
+.hud-overlay-bottom-left {
+  bottom: 10px;
+  left: 15px;
+}
+
+.hud-overlay-bottom-right {
+  bottom: 10px;
+  right: 15px;
+}
+
+@keyframes pulseGreen {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* Gold laser scanner line animation */
+.scanning-laser-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 10%, rgba(255, 188, 19, 0.85) 50%, transparent 90%);
+  box-shadow: 0 0 8px rgba(255, 188, 19, 0.9);
+  z-index: 3;
+  pointer-events: none;
+  animation: scanLine 4s ease-in-out infinite;
+}
+
+@keyframes scanLine {
   0% {
-    transform: translateX(0);
+    top: 5%;
+  }
+  50% {
+    top: 95%;
   }
   100% {
-    transform: translateX(-50%);
+    top: 5%;
+  }
+}
+
+/* Antigravity Floating Background Elements */
+.antigravity-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatOrb 12s ease-in-out infinite;
+}
+
+/* Variations of orbs */
+.floating-orb-1 {
+  width: 130px;
+  height: 130px;
+  top: 15%;
+  left: 6%;
+  background: rgba(27, 30, 34, 0.012);
+  border: 1px solid rgba(27, 30, 34, 0.03);
+  animation-duration: 15s;
+}
+
+.floating-orb-2 {
+  width: 90px;
+  height: 90px;
+  top: 65%;
+  left: 14%;
+  background: rgba(255, 188, 19, 0.02);
+  border: 1px solid rgba(255, 188, 19, 0.06);
+  animation-duration: 11s;
+  animation-delay: -2s;
+}
+
+.floating-orb-3 {
+  width: 170px;
+  height: 170px;
+  top: 10%;
+  right: 8%;
+  background: rgba(255, 188, 19, 0.015);
+  border: 1px solid rgba(255, 188, 19, 0.05);
+  filter: blur(1px);
+  animation-duration: 19s;
+  animation-delay: -5s;
+}
+
+.floating-orb-4 {
+  width: 70px;
+  height: 70px;
+  top: 70%;
+  right: 15%;
+  background: rgba(27, 30, 34, 0.015);
+  border: 1px solid rgba(27, 30, 34, 0.04);
+  animation-duration: 10s;
+  animation-delay: -1s;
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg);
+  }
+}
+
+@media (max-width: 992px) {
+  .topo-3d-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 
