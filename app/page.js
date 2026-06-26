@@ -1182,9 +1182,20 @@ export default function Home() {
       </section>
 
       {/* ==========================================
-         SECTION 9: TESTIMONIALS (MAP PATTERN BG)
+         SECTION 9: TESTIMONIALS (ANTIGRAVITY FLOATING REDESIGN)
          ========================================== */}
       <section className="testimonial-area section-padding">
+        
+        {/* Antigravity Floating Background Particles */}
+        <div className="antigravity-container">
+          <div className="floating-orb floating-orb-1"></div>
+          <div className="floating-orb floating-orb-2"></div>
+          <div className="floating-orb floating-orb-3"></div>
+          <div className="floating-orb floating-orb-4"></div>
+          <div className="floating-orb floating-orb-5"></div>
+          <div className="floating-orb floating-orb-6"></div>
+        </div>
+
         <div className="container">
           <div className="section-title center-align text-center">
             <h2>Qué Dicen Nuestros Clientes</h2>
