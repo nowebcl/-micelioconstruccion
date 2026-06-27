@@ -641,7 +641,7 @@ header.scrolled .menu-area {
   display: flex;
   align-items: center;
   transition: opacity 0.8s ease-in-out;
-  padding-bottom: 150px;
+  padding-bottom: 60px;
   box-sizing: border-box;
 }
 
@@ -847,7 +847,7 @@ header.scrolled .menu-area {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: 8px;
@@ -988,7 +988,11 @@ header.scrolled .menu-area {
 
 @media (max-width: 992px) {
   .hero-scroll-down {
+    display: flex;
     bottom: 30px;
+  }
+  .single-slide {
+    padding-bottom: 0;
   }
   .features-section {
     margin-top: 40px;
