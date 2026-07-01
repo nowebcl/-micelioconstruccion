@@ -37,6 +37,130 @@ const primaryProjects = [
   }
 ];
 
+// 12 High-fidelity gallery items from public/assets/galería for the dynamic gallery section
+const galleryItems = [
+  {
+    id: 1,
+    title: "Montaje de Cerchas Metálicas R5",
+    category: "Metálicas",
+    img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.26.jpeg",
+    loc: "Sector Industrial, Puerto Montt",
+    coords: "41°28'32\"S, 72°57'14\"W",
+    elevation: "78m",
+    desc: "Montaje de alta precisión para cerchas metálicas pesadas en estructura de galpón industrial. Alineación láser y control de torque en uniones apernadas."
+  },
+  {
+    id: 2,
+    title: "Fundaciones de Hormigón H30",
+    category: "Obras",
+    img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.29.jpeg",
+    loc: "Planta SalmoSur, Calbuco",
+    coords: "41°46'22\"S, 73°08'11\"W",
+    elevation: "12m",
+    desc: "Vaciado y vibrado de hormigón estructural de alta resistencia H30 para bases de silos industriales de almacenamiento. Control de temperatura y fraguado."
+  },
+  {
+    id: 3,
+    title: "Excavación y Nivelación de Plataforma",
+    category: "Maquinaria",
+    img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.30.jpeg",
+    loc: "Parque Industrial, Puerto Varas",
+    coords: "41°19'45\"S, 72°59'30\"W",
+    elevation: "110m",
+    desc: "Movimiento de tierras masivo, excavación en terreno de alta densidad y conformación de plataformas para pavimentación industrial posterior."
+  },
+  {
+    id: 4,
+    title: "Infraestructura Vial Industrial",
+    category: "Obras",
+    img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31 (1).jpeg",
+    loc: "Centro de Distribución, Osorno",
+    coords: "40°34'12\"S, 73°09'45\"W",
+    elevation: "95m",
+    desc: "Construcción de calzadas de hormigón armado de alto tráfico y soleras integradas para accesos de camiones de carga pesada."
+  },
+  {
+    id: 5,
+    title: "Bodega de Acero Estructural Termoacústica",
+    category: "Metálicas",
+    img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31 (2).jpeg",
+    loc: "Sector La Laja, Puerto Varas",
+    coords: "41°18'55\"S, 72°58'12\"W",
+    elevation: "135m",
+    desc: "Estructura metálica modular con revestimiento de paneles termoacústicos. Montaje rápido con grúas telescópicas de alta capacidad."
+  },
+  {
+    id: 6,
+    title: "Preparación de Terrenos con Bulldozer",
+    category: "Maquinaria",
+    img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31 (3).jpeg",
+    loc: "Camino Alerce, Puerto Montt",
+    coords: "41°25'08\"S, 72°54'20\"W",
+    elevation: "55m",
+    desc: "Corte y escarpe de suelo orgánico con bulldozer pesado CAT D6. Preparación de subrasante apta para rellenos estructurales compactados."
+  },
+  {
+    id: 7,
+    title: "Instalación de Faenas y Obras Provisorias",
+    category: "Obras",
+    img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31 (4).jpeg",
+    loc: "Parque Eólico, Llanquihue",
+    coords: "41°15'33\"S, 73°02'40\"W",
+    elevation: "160m",
+    desc: "Montaje de campamentos modulares, oficinas técnicas, bodegas provisionales y habilitación de accesos viales seguros."
+  },
+  {
+    id: 8,
+    title: "Estructura de Galpón Industrial de Gran Luz",
+    category: "Metálicas",
+    img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31 (5).jpeg",
+    loc: "Cardonal, Puerto Montt",
+    coords: "41°27'50\"S, 72°59'48\"W",
+    elevation: "88m",
+    desc: "Galpón industrial de luces libres de 30 metros. Marcos rígidos de alma llena de sección variable y costaneras de alta resistencia."
+  },
+  {
+    id: 9,
+    title: "Movimiento de Tierras Masivo y Enrocado",
+    category: "Maquinaria",
+    img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31 (6).jpeg",
+    loc: "Puerto Salmones, Chiloé",
+    coords: "42°28'10\"S, 73°47'15\"W",
+    elevation: "5m",
+    desc: "Protección costera mediante enrocado de gran tonelaje y excavación de taludes con retroexcavadoras de oruga en borde marino."
+  },
+  {
+    id: 10,
+    title: "Construcción de Fundaciones Corridas",
+    category: "Obras",
+    img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31.jpeg",
+    loc: "Edificio Administrativo, Castro",
+    coords: "42°29'05\"S, 73°45'40\"W",
+    elevation: "42m",
+    desc: "Armadura de refuerzo y colocación de moldajes metálicos para hormigonado de fundaciones corridas y vigas de fundación de alta rigidez."
+  },
+  {
+    id: 11,
+    title: "Detalle de Soldaduras Estructurales Calificadas",
+    category: "Metálicas",
+    img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.32 (1).jpeg",
+    loc: "Taller Central, Puerto Montt",
+    coords: "41°28'12\"S, 72°56'50\"W",
+    elevation: "40m",
+    desc: "Soldaduras de arco sumergido y manuales calificadas bajo norma AWS D1.1. Ensayos no destructivos de tintas penetrantes e ultrasonido."
+  },
+  {
+    id: 12,
+    title: "Carguío de Material y Retiro de Escombros",
+    category: "Maquinaria",
+    img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.32.jpeg",
+    loc: "Faena Centro, Osorno",
+    coords: "40°35'15\"S, 73°08'20\"W",
+    elevation: "92m",
+    desc: "Carguío eficiente de material excedente mediante excavadora de gran volumen a camiones tolva de 15m³ para disposición autorizada."
+  }
+];
+
 // The 6 high-fidelity B2B services requested by the client
 const servicesList = [
   {
@@ -223,6 +347,7 @@ export default function Home() {
 
   // Interactive Lightbox states
   const [activeLightbox, setActiveLightbox] = useState(null);
+  const [activeCategory, setActiveCategory] = useState("Todos");
 
 
 
@@ -1176,6 +1301,79 @@ export default function Home() {
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================
+         SECTION 5E: GALERÍA DE FAENAS DINÁMICA
+         ========================================== */}
+      <section className="dynamic-gallery-section section-padding" id="galeria">
+        <div className="container">
+          <div className="section-title center-align text-center">
+            <h5>NUESTRAS FAENAS EN REGISTRO</h5>
+            <h2>Galería de Faenas</h2>
+            <div className="section-title-bar"></div>
+            <p className="section-intro-text">
+              Registro visual de alta fidelidad de nuestras operaciones, montajes estructurales y movimientos de tierra en el sur de Chile.
+            </p>
+          </div>
+
+          {/* Category Tabs */}
+          <div className="gallery-tabs">
+            {["Todos", "Obras", "Metálicas", "Maquinaria"].map((category) => (
+              <button
+                key={category}
+                className={`gallery-tab-btn ${activeCategory === category ? "active" : ""}`}
+                onClick={() => setActiveCategory(category)}
+              >
+                {category === "Todos" ? "Todos" : category === "Obras" ? "Obras Civiles" : category === "Metálicas" ? "Estructuras Metálicas" : "Maquinaria y Terrenos"}
+              </button>
+            ))}
+          </div>
+
+          {/* Gallery Grid */}
+          <div className="gallery-grid">
+            {galleryItems
+              .filter(item => activeCategory === "Todos" || item.category === activeCategory)
+              .map((item) => (
+                <div
+                  key={item.id}
+                  className="gallery-grid-item"
+                  onClick={() => setActiveLightbox(item)}
+                >
+                  <div className="gallery-image-wrapper" style={{ position: "relative" }}>
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="gallery-item-image"
+                      loading="lazy"
+                    />
+                    <div className="gallery-item-overlay">
+                      <div className="gallery-item-content">
+                        <span className="gallery-item-cat">{item.category}</span>
+                        <h4 className="gallery-item-title">{item.title}</h4>
+                        <div className="gallery-item-meta">
+                          <span className="gallery-item-loc">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            {item.loc}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="gallery-item-zoom-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </section>
