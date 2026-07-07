@@ -328,6 +328,8 @@ export default function Home() {
 
   // Slide carousel state (0, 1, 2)
   const [activeSlide, setActiveSlide] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
 
   // HUD telemetry simulator
   const [telemetry, setTelemetry] = useState({
@@ -365,6 +367,28 @@ export default function Home() {
   const [calcClientName, setCalcClientName] = useState("");
   const [calcClientEmail, setCalcClientEmail] = useState("");
   const [calcClientLoc, setCalcClientLoc] = useState("");
+
+  // Slider Touch Swipe Event Handlers
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.targetTouches[0].clientX);
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    const minSwipeDistance = 50;
+    const distance = touchStartX - touchEndX;
+    if (distance > minSwipeDistance) {
+      // Swiped left -> next slide
+      setActiveSlide((prev) => (prev + 1) % 3);
+    } else if (distance < -minSwipeDistance) {
+      // Swiped right -> prev slide
+      setActiveSlide((prev) => (prev === 0 ? 2 : prev - 1));
+    }
+  };
 
   // Sync default slider sizes based on selected service
   useEffect(() => {
@@ -557,7 +581,7 @@ export default function Home() {
       setActiveSlide((prev) => (prev + 1) % 3);
     }, 6000);
     return () => clearInterval(timer);
-  }, []);
+  }, [activeSlide]);
 
   // Telemetry fluctuation simulator
   useEffect(() => {
@@ -864,32 +888,17 @@ export default function Home() {
       {/* ==========================================
          SECTION 2: HERO SLIDER (3 FULL SLIDES)
          ========================================== */}
-      <section className="hero-slider-wrap" id="inicio">
+      <section 
+        className="hero-slider-wrap" 
+        id="inicio"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div className="slider-container">
           
-          {/* Slide 1: Drone topograhy video */}
+          {/* Slide 1: Structural calculation */}
           <div className={`single-slide ${activeSlide === 0 ? "active" : ""}`}>
-            <video className="slide-bg-video" autoPlay loop muted playsInline poster="/assets/levantamiento_3d.png">
-              <source src="/assets/fondo.mp4" type="video/mp4" />
-            </video>
-            <div className="slide-overlay"></div>
-            <div className="container slide-content-container">
-              <div className="slide-content">
-                <span className="hero-subtitle">INGENIERÍA & TOPOGRAFÍA AÉREA</span>
-                <h2 className="hero-title">Proporcionamos Ortomosaicos Y Topografía <span>RTK</span> De Precisión.</h2>
-                <p className="hero-description">
-                  Levantamientos fotogramétricos con posicionamiento centimétrico y teledetección multiespectral adaptados a la geografía y pluviosidad austral.
-                </p>
-                <div className="hero-buttons">
-                  <a href="#servicios" className="btn ss-btn" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Nuestros Servicios</a>
-                  <a href="#contacto" className="btn ss-btn active" onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}>Contáctenos</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Slide 2: Structural calculation */}
-          <div className={`single-slide ${activeSlide === 1 ? "active" : ""}`}>
             <Image 
               src="/assets/industrial_design.png" 
               alt="Cálculo estructural de galpones" 
@@ -908,6 +917,27 @@ export default function Home() {
                 <div className="hero-buttons">
                   <a href="#proyectos" className="btn ss-btn" onClick={(e) => { e.preventDefault(); document.getElementById("proyectos")?.scrollIntoView({ behavior: "smooth" }); }}>Ver Portafolio</a>
                   <a href="#contacto" className="btn ss-btn active" onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}>Cotizar Obra</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Slide 2: Drone topograhy video */}
+          <div className={`single-slide ${activeSlide === 1 ? "active" : ""}`}>
+            <video className="slide-bg-video" autoPlay loop muted playsInline poster="/assets/levantamiento_3d.png">
+              <source src="/assets/fondo.mp4" type="video/mp4" />
+            </video>
+            <div className="slide-overlay"></div>
+            <div className="container slide-content-container">
+              <div className="slide-content">
+                <span className="hero-subtitle">INGENIERÍA & TOPOGRAFÍA AÉREA</span>
+                <h2 className="hero-title">Proporcionamos Ortomosaicos Y Topografía <span>RTK</span> De Precisión.</h2>
+                <p className="hero-description">
+                  Levantamientos fotogramétricos con posicionamiento centimétrico y teledetección multiespectral adaptados a la geografía y pluviosidad austral.
+                </p>
+                <div className="hero-buttons">
+                  <a href="#servicios" className="btn ss-btn" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Nuestros Servicios</a>
+                  <a href="#contacto" className="btn ss-btn active" onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}>Contáctenos</a>
                 </div>
               </div>
             </div>
@@ -981,12 +1011,12 @@ export default function Home() {
             <div className="feature-box">
               <div className="feature-icon-wrap">
                 <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
               <div className="feature-content">
-                <h3>Topografía RTK</h3>
-                <p>Nubes de puntos tridimensionales y georreferenciación centimétrica en tiempo real mediante drones DJI Enterprise.</p>
+                <h3>Montaje Industrial</h3>
+                <p>Fabricación e izado de galpones de gran luz, naves industriales y estructuras de acero de alta resistencia.</p>
               </div>
             </div>
 
@@ -994,12 +1024,12 @@ export default function Home() {
             <div className="feature-box">
               <div className="feature-icon-wrap">
                 <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 21h12M12 3l9 18H3L12 3z" />
                 </svg>
               </div>
               <div className="feature-content">
-                <h3>Ingeniería Sostenible</h3>
-                <p>Cálculo y diseño estructural sismorresistente optimizado para galpones y cimientos industriales australes.</p>
+                <h3>Obras Civiles</h3>
+                <p>Cálculo sismorresistente, fundaciones profundas y obras de hormigón armado optimizadas para el suelo austral.</p>
               </div>
             </div>
 
@@ -1011,8 +1041,8 @@ export default function Home() {
                 </svg>
               </div>
               <div className="feature-content">
-                <h3>Control de Cota</h3>
-                <p>Nivelación precisa, cubicación digital y excavaciones controladas geométricamente por topografía diferencial.</p>
+                <h3>Movimiento de Tierras</h3>
+                <p>Nivelación de plataformas, protección costera mediante enrocados y excavaciones de precisión.</p>
               </div>
             </div>
 
