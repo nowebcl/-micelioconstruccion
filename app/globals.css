@@ -622,8 +622,8 @@ header.scrolled .menu-area {
    ========================================================================== */
 .hero-slider-wrap {
   position: relative;
-  height: 85vh;
-  min-height: 600px;
+  height: calc(100vh - 240px);
+  min-height: 460px;
   background: var(--color-navy);
   overflow: hidden;
 }
