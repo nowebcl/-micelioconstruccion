@@ -361,7 +361,7 @@ export default function Home() {
   const [formSuccess, setFormSuccess] = useState(false);
 
   // Dynamic Quote Calculator States
-  const [calcService, setCalcService] = useState("topografia");
+  const [calcService, setCalcService] = useState("galpones");
   const [calcSize, setCalcSize] = useState(5);
   const [calcComplexity, setCalcComplexity] = useState("media");
   const [calcClientName, setCalcClientName] = useState("");
@@ -922,29 +922,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Slide 2: Drone topograhy video */}
+          {/* Slide 2: Excavation / Earthmoving */}
           <div className={`single-slide ${activeSlide === 1 ? "active" : ""}`}>
-            <video className="slide-bg-video" autoPlay loop muted playsInline poster="/assets/drone_topography.png">
-              <source src="/assets/fondo.mp4" type="video/mp4" />
-            </video>
-            <div className="slide-overlay"></div>
-            <div className="container slide-content-container">
-              <div className="slide-content">
-                <span className="hero-subtitle">INGENIERÍA & TOPOGRAFÍA AÉREA</span>
-                <h2 className="hero-title">Proporcionamos Ortomosaicos Y Topografía <span>RTK</span> De Precisión.</h2>
-                <p className="hero-description">
-                  Levantamientos fotogramétricos con posicionamiento centimétrico y teledetección multiespectral adaptados a la geografía y pluviosidad austral.
-                </p>
-                <div className="hero-buttons">
-                  <a href="#servicios" className="btn ss-btn" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Nuestros Servicios</a>
-                  <a href="#contacto" className="btn ss-btn active" onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}>Contáctenos</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Slide 3: Excavation / Earthmoving */}
-          <div className={`single-slide ${activeSlide === 2 ? "active" : ""}`}>
             <Image 
               src="/assets/earthmoving.png" 
               alt="Maquinaria y movimiento de tierras" 
@@ -963,6 +942,27 @@ export default function Home() {
                 <div className="hero-buttons">
                   <a href="#proyectos" className="btn ss-btn" onClick={(e) => { e.preventDefault(); document.getElementById("proyectos")?.scrollIntoView({ behavior: "smooth" }); }}>Ver Proyectos</a>
                   <a href="#contacto" className="btn ss-btn active" onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}>Oficina Técnica</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Slide 3: Drone topograhy video */}
+          <div className={`single-slide ${activeSlide === 2 ? "active" : ""}`}>
+            <video className="slide-bg-video" autoPlay loop muted playsInline poster="/assets/drone_topography.png">
+              <source src="/assets/fondo.mp4" type="video/mp4" />
+            </video>
+            <div className="slide-overlay"></div>
+            <div className="container slide-content-container">
+              <div className="slide-content">
+                <span className="hero-subtitle">INGENIERÍA & TOPOGRAFÍA AÉREA</span>
+                <h2 className="hero-title">Proporcionamos Ortomosaicos Y Topografía <span>RTK</span> De Precisión.</h2>
+                <p className="hero-description">
+                  Levantamientos fotogramétricos con posicionamiento centimétrico y teledetección multiespectral adaptados a la geografía y pluviosidad austral.
+                </p>
+                <div className="hero-buttons">
+                  <a href="#servicios" className="btn ss-btn" onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}>Nuestros Servicios</a>
+                  <a href="#contacto" className="btn ss-btn active" onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}>Contáctenos</a>
                 </div>
               </div>
             </div>
@@ -1925,13 +1925,13 @@ export default function Home() {
                     
                     <button 
                       type="button"
-                      className={`service-select-btn ${calcService === "topografia" ? "active" : ""}`}
-                      onClick={() => setCalcService("topografia")}
+                      className={`service-select-btn ${calcService === "galpones" ? "active" : ""}`}
+                      onClick={() => setCalcService("galpones")}
                     >
                       <svg className="btn-icon" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 4L9 7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3" />
                       </svg>
-                      <span>Topografía</span>
+                      <span>Estructuras</span>
                     </button>
 
                     <button 
@@ -1969,13 +1969,13 @@ export default function Home() {
 
                     <button 
                       type="button"
-                      className={`service-select-btn ${calcService === "galpones" ? "active" : ""}`}
-                      onClick={() => setCalcService("galpones")}
+                      className={`service-select-btn ${calcService === "topografia" ? "active" : ""}`}
+                      onClick={() => setCalcService("topografia")}
                     >
                       <svg className="btn-icon" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 4L9 7" />
                       </svg>
-                      <span>Estructuras</span>
+                      <span>Topografía</span>
                     </button>
 
                   </div>
