@@ -924,7 +924,7 @@ export default function Home() {
 
           {/* Slide 2: Drone topograhy video */}
           <div className={`single-slide ${activeSlide === 1 ? "active" : ""}`}>
-            <video className="slide-bg-video" autoPlay loop muted playsInline poster="/assets/levantamiento_3d.png">
+            <video className="slide-bg-video" autoPlay loop muted playsInline poster="/assets/drone_topography.png">
               <source src="/assets/fondo.mp4" type="video/mp4" />
             </video>
             <div className="slide-overlay"></div>
