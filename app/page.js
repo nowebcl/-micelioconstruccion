@@ -204,7 +204,7 @@ const servicesList = [
     title: "Agua potable y alcantarillado",
     hoverTitle: "Obras Sanitarias",
     desc: "Construcción, reparación y ampliación de redes de agua potable, alcantarillado y sistemas sanitarios para instalaciones industriales y proyectos públicos.",
-    img: "/assets/WhatsApp Image 2026-06-10 at 21.16.00 (1).jpeg",
+    img: "/assets/agua_potable_alcantarillado.png",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
