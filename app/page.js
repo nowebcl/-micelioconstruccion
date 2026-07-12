@@ -349,7 +349,7 @@ export default function Home() {
 
   // Interactive Lightbox states
   const [activeLightbox, setActiveLightbox] = useState(null);
-  const [activeCategory, setActiveCategory] = useState("Todos");
+  const [currentPage, setCurrentPage] = useState(1);
 
 
 
@@ -1351,21 +1351,15 @@ export default function Home() {
 
           {/* Category Tabs */}
           <div className="gallery-tabs">
-            {["Todos", "Obras", "Metálicas", "Maquinaria"].map((category) => (
-              <button
-                key={category}
-                className={`gallery-tab-btn ${activeCategory === category ? "active" : ""}`}
-                onClick={() => setActiveCategory(category)}
-              >
-                {category === "Todos" ? "Todos" : category === "Obras" ? "Obras Civiles" : category === "Metálicas" ? "Estructuras Metálicas" : "Maquinaria y Terrenos"}
-              </button>
-            ))}
+            <button className="gallery-tab-btn active" style={{ cursor: "default" }}>
+              Proyectos
+            </button>
           </div>
 
           {/* Gallery Grid */}
           <div className="gallery-grid">
             {galleryItems
-              .filter(item => activeCategory === "Todos" || item.category === activeCategory)
+              .slice((currentPage - 1) * 6, currentPage * 6)
               .map((item) => (
                 <div
                   key={item.id}
@@ -1404,6 +1398,38 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+          </div>
+
+          {/* Pagination Controls */}
+          <div className="gallery-pagination">
+            <button 
+              className="pagination-arrow-btn"
+              onClick={() => setCurrentPage(1)}
+              disabled={currentPage === 1}
+              aria-label="Página anterior"
+            >
+              ❮ Anterior
+            </button>
+            <button 
+              className={`pagination-num-btn ${currentPage === 1 ? "active" : ""}`}
+              onClick={() => setCurrentPage(1)}
+            >
+              1
+            </button>
+            <button 
+              className={`pagination-num-btn ${currentPage === 2 ? "active" : ""}`}
+              onClick={() => setCurrentPage(2)}
+            >
+              2
+            </button>
+            <button 
+              className="pagination-arrow-btn"
+              onClick={() => setCurrentPage(2)}
+              disabled={currentPage === 2}
+              aria-label="Página siguiente"
+            >
+              Siguiente ❯
+            </button>
           </div>
         </div>
       </section>
@@ -1453,122 +1479,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ==========================================
-         SECTION 7: ACHIEVEMENTS & CIRCULAR PROGRESS
-         ========================================== */}
-      <section className="achievements-section section-padding">
-        <div className="container">
-          <div className="achievements-grid">
-            
-            {/* Left Column: Circular Progresses */}
-            <div className="progress-outer">
-              
-              {/* Circle 1 */}
-              <div className="progress-box">
-                <div className="circular-progress-wrap">
-                  <svg width="100" height="100">
-                    <circle cx="50" cy="50" r="40" stroke="#eeeeee" strokeWidth="8" fill="transparent" />
-                    <circle 
-                      cx="50" 
-                      cy="50" 
-                      r="40" 
-                      stroke="var(--color-accent)" 
-                      strokeWidth="8" 
-                      fill="transparent" 
-                      strokeDasharray="251.32" 
-                      strokeDashoffset={getStrokeOffset(achievements.precision)}
-                      style={{ transition: "stroke-dashoffset 1.5s cubic-bezier(0.16, 1, 0.3, 1)" }}
-                    />
-                  </svg>
-                  <div className="progress-value">{achievements.precision.toFixed(1)}%</div>
-                </div>
-                <p>Precisión RTK</p>
-              </div>
-
-              {/* Circle 2 */}
-              <div className="progress-box">
-                <div className="circular-progress-wrap">
-                  <svg width="100" height="100">
-                    <circle cx="50" cy="50" r="40" stroke="#eeeeee" strokeWidth="8" fill="transparent" />
-                    <circle 
-                      cx="50" 
-                      cy="50" 
-                      r="40" 
-                      stroke="var(--color-accent)" 
-                      strokeWidth="8" 
-                      fill="transparent" 
-                      strokeDasharray="251.32" 
-                      strokeDashoffset={getStrokeOffset(achievements.plazos)}
-                      style={{ transition: "stroke-dashoffset 1.5s cubic-bezier(0.16, 1, 0.3, 1)" }}
-                    />
-                  </svg>
-                  <div className="progress-value">{achievements.plazos.toFixed(1)}%</div>
-                </div>
-                <p>Plazos de Obra</p>
-              </div>
-
-              {/* Circle 3 */}
-              <div className="progress-box">
-                <div className="circular-progress-wrap">
-                  <svg width="100" height="100">
-                    <circle cx="50" cy="50" r="40" stroke="#eeeeee" strokeWidth="8" fill="transparent" />
-                    <circle 
-                      cx="50" 
-                      cy="50" 
-                      r="40" 
-                      stroke="var(--color-accent)" 
-                      strokeWidth="8" 
-                      fill="transparent" 
-                      strokeDasharray="251.32" 
-                      strokeDashoffset={getStrokeOffset(achievements.seguridad)}
-                      style={{ transition: "stroke-dashoffset 1.5s cubic-bezier(0.16, 1, 0.3, 1)" }}
-                    />
-                  </svg>
-                  <div className="progress-value">{achievements.seguridad}%</div>
-                </div>
-                <p>Seguridad HSE</p>
-              </div>
-
-            </div>
-
-            {/* Right Column: Narrative & Signature */}
-            <div className="achievements-content">
-              <h2>Vea Lo Que Hemos Logrado En Terreno.</h2>
-              <p>
-                Garantizamos la fidelidad geométrica milimétrica de nuestras cubicaciones y la rigidez estructural de las naves que diseñamos y montamos. Operamos bajo las condiciones pluviales más adversas de la Patagonia, asegurando la continuidad de sus faenas.
-              </p>
-              <p>
-                Nuestros procesos técnicos y el uso de drones DJI Enterprise georreferenciados por antenas RTK nos permiten entregar planos, volúmenes e informes periciales libres de desviaciones.
-              </p>
-
-              <div className="achievements-profile-row">
-                <div className="achivments-outer">
-                  <div className="img-avatar">
-                    <Image 
-                      src="/assets/WhatsApp Image 2026-06-10 at 21.16.06.jpeg" 
-                      alt="Ignacio Silva T." 
-                      width={60} 
-                      height={60} 
-                    />
-                  </div>
-                  <div className="text">
-                    <h5>Ignacio Silva T.</h5>
-                    <p>Director de Proyectos - Micelio</p>
-                  </div>
-                </div>
-                
-                {/* Simulated handwritten signature block */}
-                <div className="signature-wrap">
-                  <span style={{ fontFamily: "Georgia, serif", fontStyle: "italic", fontSize: "28px", color: "var(--color-navy)", opacity: 0.85 }}>
-                    I. Silva T.
-                  </span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
       {/* ==========================================
          SECTION 8: LATEST PROJECTS (DARK BACKGROUND, HOVER ZOOM FIGCAPTION)
