@@ -458,24 +458,24 @@ export default function Home() {
 
     switch(calcService) {
       case "topografia":
-        base = 220000;
-        perUnit = 45000;
+        base = 450000;
+        perUnit = 70000;
         break;
       case "calculo":
-        base = 350000;
-        perUnit = 1100;
+        base = 1500000;
+        perUnit = 4500;
         break;
       case "tierras":
-        base = 450000;
-        perUnit = 4200;
+        base = 1200000;
+        perUnit = 8500;
         break;
       case "ito":
-        base = 500000;
-        perUnit = 120000;
+        base = 450000;
+        perUnit = 160000;
         break;
       case "galpones":
-        base = 1100000;
-        perUnit = 8000;
+        base = 4500000;
+        perUnit = 95000;
         break;
     }
 
