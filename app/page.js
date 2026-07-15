@@ -346,9 +346,6 @@ export default function Home() {
     plazos: 0,
     seguridad: 0,
   });
-
-  // Interactive Lightbox states
-  const [activeLightbox, setActiveLightbox] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
 
@@ -1364,7 +1361,6 @@ export default function Home() {
                 <div
                   key={item.id}
                   className="gallery-grid-item"
-                  onClick={() => setActiveLightbox(item)}
                 >
                   <div className="gallery-image-wrapper" style={{ position: "relative" }}>
                     <Image
@@ -1375,12 +1371,6 @@ export default function Home() {
                       className="gallery-item-image"
                       loading="lazy"
                     />
-
-                    <div className="gallery-item-zoom-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
-                      </svg>
-                    </div>
                   </div>
                 </div>
               ))}
@@ -1953,8 +1943,6 @@ export default function Home() {
                         alt="Galería 1" 
                         width={110} 
                         height={80} 
-                        style={{ cursor: "pointer" }}
-                        onClick={() => setActiveLightbox(primaryProjects[2])}
                       />
                     </li>
                     <li>
@@ -1963,8 +1951,6 @@ export default function Home() {
                         alt="Galería 2" 
                         width={110} 
                         height={80} 
-                        style={{ cursor: "pointer" }}
-                        onClick={() => setActiveLightbox(primaryProjects[0])}
                       />
                     </li>
                     <li>
@@ -1981,8 +1967,6 @@ export default function Home() {
                         alt="Galería 4" 
                         width={110} 
                         height={80} 
-                        style={{ cursor: "pointer" }}
-                        onClick={() => setActiveLightbox(primaryProjects[1])}
                       />
                     </li>
                     <li>
@@ -1991,7 +1975,6 @@ export default function Home() {
                         alt="Galería 5" 
                         width={110} 
                         height={80} 
-                        style={{ cursor: "pointer" }}
                       />
                     </li>
                     <li>
@@ -2000,7 +1983,6 @@ export default function Home() {
                         alt="Galería 6" 
                         width={110} 
                         height={80} 
-                        style={{ cursor: "pointer" }}
                       />
                     </li>
                   </ul>
@@ -2049,53 +2031,6 @@ export default function Home() {
 
       </footer>
 
-      {/* ==========================================
-         PORTFOLIO TECHNICAL LIGHTBOX MODAL
-         ========================================== */}
-      {activeLightbox && (
-        <div className="lightbox-modal" role="dialog" aria-modal="true">
-          <div className="lightbox-overlay" onClick={() => setActiveLightbox(null)}></div>
-          <div className="lightbox-content-card">
-            <button className="lightbox-close-btn" onClick={() => setActiveLightbox(null)}>✕</button>
-            <div className="lightbox-img-wrap">
-              <Image 
-                src={activeLightbox.img} 
-                alt={activeLightbox.title} 
-                fill
-                sizes="90vw"
-                className="lightbox-img"
-              />
-            </div>
-            <div className="lightbox-meta-panel">
-              <span className="gallery-item-tag" style={{ fontSize: "11px", fontWeight: "700", color: "var(--color-accent)", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "15px", display: "block" }}>
-                {activeLightbox.category}
-              </span>
-              <p style={{ fontSize: "14px", lineHeight: "24px", color: "var(--color-text)", marginBottom: "25px" }}>
-                {activeLightbox.desc}
-              </p>
-              
-              <div className="lightbox-tech-grid">
-                <div className="hud-line">
-                  <span style={{ fontWeight: "700", color: "var(--color-navy)", fontSize: "11px", minWidth: "120px", display: "inline-block" }}>UBICACIÓN:</span>
-                  <span style={{ fontSize: "13px", color: "var(--color-text)" }}>{activeLightbox.loc}</span>
-                </div>
-                <div className="hud-line">
-                  <span style={{ fontWeight: "700", color: "var(--color-navy)", fontSize: "11px", minWidth: "120px", display: "inline-block" }}>COORDENADAS:</span>
-                  <span style={{ fontSize: "13px", color: "var(--color-accent)", fontWeight: "600" }}>{activeLightbox.coords}</span>
-                </div>
-                <div className="hud-line">
-                  <span style={{ fontWeight: "700", color: "var(--color-navy)", fontSize: "11px", minWidth: "120px", display: "inline-block" }}>ELEVACIÓN:</span>
-                  <span style={{ fontSize: "13px", color: "var(--color-text)" }}>{activeLightbox.elevation}</span>
-                </div>
-                <div className="hud-line">
-                  <span style={{ fontWeight: "700", color: "var(--color-navy)", fontSize: "11px", minWidth: "120px", display: "inline-block" }}>SISTEMA:</span>
-                  <span style={{ fontSize: "11px", color: "var(--color-accent)", fontWeight: "bold", fontFamily: "monospace" }}>RTK_GPS // CONNECTED</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* ==========================================
          CONTACT SUCCESS MODAL
