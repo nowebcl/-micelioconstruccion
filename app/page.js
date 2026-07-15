@@ -7,33 +7,33 @@ import Image from "next/image";
 const primaryProjects = [
   {
     id: 1,
-    title: "Montaje Estructural Galpón Industrial R5",
+    title: "Montaje Estructural en Planta Calbuco",
     category: "Construcción",
     img: "/assets/WhatsApp Image 2026-06-10 at 21.15.58.jpeg",
-    loc: "Ruta 5 Sur, Puerto Montt",
-    coords: "41°27'10\"S, 72°58'55\"W",
-    elevation: "82m",
-    desc: "Izado, nivelación y fijación de columnas de acero estructural con recubrimiento de protección anticorrosiva pesada adaptada a la pluviosidad austral."
+    loc: "Calbuco, Región de Los Lagos",
+    coords: "41°46'22\"S, 73°08'11\"W",
+    elevation: "12m",
+    desc: "Izado, alineación y montaje de columnas y vigas de acero estructural para naves industriales de gran luz con protección anticorrosiva pesada."
   },
   {
     id: 2,
-    title: "Excavación de Fundaciones Especiales",
-    category: "Movimiento Tierras",
+    title: "Construcción de Losa Radier Estructural",
+    category: "Obras Civiles",
     img: "/assets/WhatsApp Image 2026-06-10 at 21.15.58 (1).jpeg",
-    loc: "Carretera Austral, Puerto Montt",
-    coords: "41°28'50\"S, 72°51'40\"W",
-    elevation: "45m",
-    desc: "Preparación de sellos de fundación, compactaciones controladas y excavación masiva mediante maquinaria pesada guiada digitalmente en cota."
+    loc: "Ruta 5 Sur, Puerto Montt",
+    coords: "41°27'10\"S, 72°58'55\"W",
+    elevation: "82m",
+    desc: "Vaciado, compactación y nivelación de losa radier de hormigón estructural H30 con malla Acma para almacenamiento de alto tonelaje."
   },
   {
     id: 3,
-    title: "Inspección Técnica de Obra Aeródromo",
+    title: "Inspección Técnica de Obra y Obras Viales",
     category: "Inspección ITO",
     img: "/assets/WhatsApp Image 2026-06-10 at 21.15.58 (2).jpeg",
-    loc: "Ancud, Chiloé",
-    coords: "41°52'12\"S, 73°49'33\"W",
-    elevation: "65m",
-    desc: "Monitoreo fotogramétrico regular, control geométrico 3D de volúmenes de tierra y fiscalización técnica del trazado de pistas auxiliares."
+    loc: "Chamiza, Carretera Austral",
+    coords: "41°28'50\"S, 72°51'40\"W",
+    elevation: "45m",
+    desc: "Monitoreo fotogramétrico regular, control de cotas 3D de movimiento de tierras y fiscalización técnica de pavimentación vial e industrial."
   }
 ];
 
@@ -41,38 +41,38 @@ const primaryProjects = [
 const galleryItems = [
   {
     id: 1,
-    title: "Montaje de Cerchas Metálicas R5",
-    category: "Metálicas",
+    title: "Montaje de Cerchas Metálicas - Planta Calbuco",
+    category: "Estructuras Metálicas",
     img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.26.jpeg",
-    loc: "Sector Industrial, Puerto Montt",
-    coords: "41°28'32\"S, 72°57'14\"W",
-    elevation: "78m",
+    loc: "Planta Calbuco, Calbuco",
+    coords: "41°46'22\"S, 73°08'11\"W",
+    elevation: "12m",
     desc: "Montaje de alta precisión para cerchas metálicas pesadas en estructura de galpón industrial. Alineación láser y control de torque en uniones apernadas."
   },
   {
     id: 2,
-    title: "Fundaciones de Hormigón H30",
-    category: "Obras",
+    title: "Construcción de Losa Radier Estructural",
+    category: "Obras Civiles",
     img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.29.jpeg",
-    loc: "Planta SalmoSur, Calbuco",
-    coords: "41°46'22\"S, 73°08'11\"W",
-    elevation: "12m",
-    desc: "Vaciado y vibrado de hormigón estructural de alta resistencia H30 para bases de silos industriales de almacenamiento. Control de temperatura y fraguado."
+    loc: "Sector La Laja, Puerto Varas",
+    coords: "41°18'55\"S, 72°58'12\"W",
+    elevation: "135m",
+    desc: "Vaciado, compactación y nivelación de losa radier de hormigón estructural armado H30 para galpones y bodegas de alto tonelaje."
   },
   {
     id: 3,
-    title: "Excavación y Nivelación de Plataforma",
-    category: "Maquinaria",
+    title: "Movimiento de Tierras y Obras Viales/Mineras",
+    category: "Obras Viales/Mineras",
     img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.30.jpeg",
-    loc: "Parque Industrial, Puerto Varas",
-    coords: "41°19'45\"S, 72°59'30\"W",
-    elevation: "110m",
-    desc: "Movimiento de tierras masivo, excavación en terreno de alta densidad y conformación de plataformas para pavimentación industrial posterior."
+    loc: "Faena Minera Región Austral, Puerto Montt",
+    coords: "41°28'32\"S, 72°57'14\"W",
+    elevation: "78m",
+    desc: "Movimiento de tierras masivo, excavación en terreno de alta densidad, corte de cerros y conformación de plataformas para faenas mineras."
   },
   {
     id: 4,
-    title: "Infraestructura Vial Industrial",
-    category: "Obras",
+    title: "Pavimentación de Accesos Industriales",
+    category: "Obras Civiles",
     img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31 (1).jpeg",
     loc: "Centro de Distribución, Osorno",
     coords: "40°34'12\"S, 73°09'45\"W",
@@ -81,18 +81,18 @@ const galleryItems = [
   },
   {
     id: 5,
-    title: "Bodega de Acero Estructural Termoacústica",
-    category: "Metálicas",
+    title: "Montaje de Estructura Metálica Termoacústica",
+    category: "Estructuras Metálicas",
     img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31 (2).jpeg",
-    loc: "Sector La Laja, Puerto Varas",
-    coords: "41°18'55\"S, 72°58'12\"W",
-    elevation: "135m",
+    loc: "Parque Industrial, Puerto Varas",
+    coords: "41°19'45\"S, 72°59'30\"W",
+    elevation: "110m",
     desc: "Estructura metálica modular con revestimiento de paneles termoacústicos. Montaje rápido con grúas telescópicas de alta capacidad."
   },
   {
     id: 6,
-    title: "Preparación de Terrenos con Bulldozer",
-    category: "Maquinaria",
+    title: "Nivelación de Subrasante con Maquinaria Pesada",
+    category: "Movimiento Tierras",
     img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31 (3).jpeg",
     loc: "Camino Alerce, Puerto Montt",
     coords: "41°25'08\"S, 72°54'20\"W",
@@ -101,48 +101,48 @@ const galleryItems = [
   },
   {
     id: 7,
-    title: "Instalación de Faenas y Obras Provisorias",
-    category: "Obras",
+    title: "Inspección Técnica con Dron DJI Matrice 300",
+    category: "Control Fotogramétrico",
     img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31 (4).jpeg",
-    loc: "Parque Eólico, Llanquihue",
+    loc: "Faena Eólica, Llanquihue",
     coords: "41°15'33\"S, 73°02'40\"W",
     elevation: "160m",
-    desc: "Montaje de campamentos modulares, oficinas técnicas, bodegas provisionales y habilitación de accesos viales seguros."
+    desc: "Inspección aérea técnica y levantamiento fotogramétrico centimétrico mediante dron industrial DJI Matrice 300 RTK para cubicaciones y avance de obra."
   },
   {
     id: 8,
-    title: "Estructura de Galpón Industrial de Gran Luz",
-    category: "Metálicas",
+    title: "Montaje de Galpón Industrial de Gran Luz",
+    category: "Estructuras Metálicas",
     img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31 (5).jpeg",
-    loc: "Cardonal, Puerto Montt",
+    loc: "Sector Cardonal, Puerto Montt",
     coords: "41°27'50\"S, 72°59'48\"W",
     elevation: "88m",
     desc: "Galpón industrial de luces libres de 30 metros. Marcos rígidos de alma llena de sección variable y costaneras de alta resistencia."
   },
   {
     id: 9,
-    title: "Movimiento de Tierras Masivo y Enrocado",
-    category: "Maquinaria",
+    title: "Protección Costera y Enrocados de Gran Tonelaje",
+    category: "Obras Civiles",
     img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31 (6).jpeg",
-    loc: "Puerto Salmones, Chiloé",
+    loc: "Borde Costero, Chiloé",
     coords: "42°28'10\"S, 73°47'15\"W",
     elevation: "5m",
     desc: "Protección costera mediante enrocado de gran tonelaje y excavación de taludes con retroexcavadoras de oruga en borde marino."
   },
   {
     id: 10,
-    title: "Construcción de Fundaciones Corridas",
-    category: "Obras",
+    title: "Armadura de Fierro para Vigas de Fundación",
+    category: "Obras Civiles",
     img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.31.jpeg",
-    loc: "Edificio Administrativo, Castro",
+    loc: "Edificio de Control, Castro",
     coords: "42°29'05\"S, 73°45'40\"W",
     elevation: "42m",
-    desc: "Armadura de refuerzo y colocación de moldajes metálicos para hormigonado de fundaciones corridas y vigas de fundación de alta rigidez."
+    desc: "Armadura de refuerzo sismorresistente y colocación de moldajes metálicos para hormigonado de fundaciones y vigas de amarre de alta rigidez."
   },
   {
     id: 11,
-    title: "Detalle de Soldaduras Estructurales Calificadas",
-    category: "Metálicas",
+    title: "Soldaduras Estructurales Calificadas AWS D1.1",
+    category: "Estructuras Metálicas",
     img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.32 (1).jpeg",
     loc: "Taller Central, Puerto Montt",
     coords: "41°28'12\"S, 72°56'50\"W",
@@ -151,10 +151,10 @@ const galleryItems = [
   },
   {
     id: 12,
-    title: "Carguío de Material y Retiro de Escombros",
-    category: "Maquinaria",
+    title: "Carguío Masivo y Retiro de Material Excedente",
+    category: "Movimiento Tierras",
     img: "/assets/galería/WhatsApp Image 2026-06-26 at 19.12.32.jpeg",
-    loc: "Faena Centro, Osorno",
+    loc: "Faena de Nivelación, Osorno",
     coords: "40°35'15\"S, 73°08'20\"W",
     elevation: "92m",
     desc: "Carguío eficiente de material excedente mediante excavadora de gran volumen a camiones tolva de 15m³ para disposición autorizada."
@@ -525,7 +525,7 @@ export default function Home() {
       `Quedo atento a su evaluación técnica para coordinar en terreno.`;
 
     const encodedText = encodeURIComponent(messageText);
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=56998412345&text=${encodedText}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=56940083804&text=${encodedText}`;
     
     window.open(whatsappUrl, "_blank");
   };
@@ -654,7 +654,7 @@ export default function Home() {
                     <svg className="icon" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
-                    <span>+56 9 9841 2345</span>
+                    <span>+56 9 4008 3804</span>
                   </li>
                 </ul>
               </div>
@@ -866,7 +866,7 @@ export default function Home() {
               <svg className="contact-icon" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <span>+56 9 9841 2345</span>
+              <span>+56 9 4008 3804</span>
             </div>
             <div className="mobile-contact-item">
               <svg className="contact-icon" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -1481,48 +1481,6 @@ export default function Home() {
 
 
       {/* ==========================================
-         SECTION 8: LATEST PROJECTS (DARK BACKGROUND, HOVER ZOOM FIGCAPTION)
-         ========================================== */}
-      <section className="project-two" id="proyectos">
-        <div className="container">
-          <div className="project-title-row">
-            <h2>Nuestros Últimos Proyectos</h2>
-            <a 
-              href="#contacto" 
-              className="btn ss-btn"
-              onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}
-            >
-              Ver Todos Los Proyectos
-            </a>
-          </div>
-
-          <div className="project-grid-full">
-            {primaryProjects.map((proj) => (
-              <div 
-                key={proj.id} 
-                className="grid-item hover-zoomin"
-                onClick={() => setActiveLightbox(proj)}
-              >
-                <figure className="gallery-image">
-                  <Image 
-                    src={proj.img} 
-                    alt={proj.title} 
-                    fill 
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    <h4>{proj.title}</h4>
-                    <p>{proj.category}</p>
-                  </figcaption>
-                </figure>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ==========================================
          SECTION 9B: EXPERIENCIA EN PROYECTOS PARA...
          ========================================== */}
       <section className="client-experience-section section-padding">
@@ -1855,9 +1813,12 @@ export default function Home() {
 
                 {/* 4. Live Price Counter Box */}
                 <div className="price-display-box">
-                  <div className="price-box-title">PRESUPUESTO ESTIMADO INICIAL</div>
-                  <div className="price-range">
-                    {formatCLP(getEstimatedPrice().min)} - {formatCLP(getEstimatedPrice().max)}
+                  <div className="price-box-title">PRESUPUESTO ESTIMADO INICIAL (REFERENCIAL)</div>
+                  <div className="price-range" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", flexWrap: "wrap" }}>
+                    <span>{formatCLP(getEstimatedPrice().min)} - {formatCLP(getEstimatedPrice().max)}</span>
+                  </div>
+                  <div style={{ marginTop: "5px" }}>
+                    <span className="ref-price-badge" style={{ backgroundColor: "var(--color-accent)", color: "var(--color-navy)", fontSize: "10px", fontWeight: "800", padding: "4px 10px", borderRadius: "3px", textTransform: "uppercase", letterSpacing: "0.5px", display: "inline-block" }}>Precio Referencial</span>
                   </div>
                   <p className="price-disclaimer">
                     *Valores netos aproximados en CLP + IVA. Sujeto a factibilidad en terreno.
@@ -1949,7 +1910,7 @@ export default function Home() {
                     <ul>
                       <li>
                         <span className="icon">📞</span>
-                        <span>+56 9 9841 2345<br />contacto@micelioconstruccion.cl</span>
+                        <span>+56 9 4008 3804<br />contacto@micelioconstruccion.cl</span>
                       </li>
                       <li>
                         <span className="icon">📍</span>
@@ -2176,7 +2137,7 @@ export default function Home() {
 
       {/* Floating WhatsApp Button in bottom-left - Company Colors & Tooltip */}
       <a 
-        href="https://api.whatsapp.com/send?phone=56998412345&text=Hola%20Micelio%2C%20me%20gustar%C3%ADa%20realizar%20una%20consulta%20t%C3%A9cnica."
+        href="https://api.whatsapp.com/send?phone=56940083804&text=Hola%20Micelio%2C%20me%20gustar%C3%ADa%20realizar%20una%20consulta%20t%C3%A9cnica."
         className="floating-whatsapp-btn"
         target="_blank"
         rel="noopener noreferrer"
