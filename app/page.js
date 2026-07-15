@@ -2080,12 +2080,9 @@ export default function Home() {
               />
             </div>
             <div className="lightbox-meta-panel">
-              <span className="gallery-item-tag" style={{ fontSize: "11px", fontWeight: "700", color: "var(--color-accent)", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "5px", display: "block" }}>
+              <span className="gallery-item-tag" style={{ fontSize: "11px", fontWeight: "700", color: "var(--color-accent)", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "15px", display: "block" }}>
                 {activeLightbox.category}
               </span>
-              <h3 style={{ fontSize: "22px", color: "var(--color-navy)", fontWeight: "700", marginBottom: "15px", lineHeight: "1.3" }}>
-                {activeLightbox.title}
-              </h3>
               <p style={{ fontSize: "14px", lineHeight: "24px", color: "var(--color-text)", marginBottom: "25px" }}>
                 {activeLightbox.desc}
               </p>
