@@ -1378,7 +1378,6 @@ export default function Home() {
                     <div className="gallery-item-overlay">
                       <div className="gallery-item-content">
                         <span className="gallery-item-cat">{item.category}</span>
-                        <h4 className="gallery-item-title">{item.title}</h4>
                         <div className="gallery-item-meta">
                           <span className="gallery-item-loc">
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
